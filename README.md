@@ -11,7 +11,7 @@ After an extensive search, I found the following books are highly popular in thi
 * pattern recognition and machine learning
 * Statistical rethinking
 * Bayesian analysis with python
-* [[Probability theory: The logic of science]](https://github.com/terryum/awesome-deep-learning-papers)
+* Probability theory: The logic of science
 * Bayesian data analysis
 * Think Bayes
 
