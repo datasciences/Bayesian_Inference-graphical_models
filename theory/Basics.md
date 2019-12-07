@@ -90,7 +90,7 @@ However, it is not yet clear to me why P(D) that is the normalizing constant (Pr
 The exercises from this section taken from Think Bayes github repository can be accessed from [[here]](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/blob/master/stats/day2.ipynb)
  
 
-
+[[Original git hub repo]](https://github.com/rlabbe/ThinkBayes)
 
 ## Day 2
 
