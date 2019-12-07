@@ -71,7 +71,26 @@ In this interpretation, each term has a name:
 p(H) is the probability of the hypothesis before we see the data, called the prior probability, or just prior.
 p(H|D) is what we want to compute, the probability of the hypothesis after we see the data, called the posterior.
 p(D|H) is the probability of the data under the hypothesis, called the likelihood.
-p(D) is the probability of the data under any hypothesis, called the normalizing constant.
+p(D) is the probability of the data under any hypothesis, called the normalizing constant. Normalizing constant is a weighting factor, adjusting the odds towards the more likely outcome.Read this example for a more thorough understanding. 
+
+
+6) The M and M problem
+ 	Prior	Likelihood	 	Posterior
+ 	p(H)	p(D|H)	p(H) p(D|H)	p(H|D)
+A	1/2	(20)(20)	200	20/27
+B	1/2	(14)(10)	70	7/27
+
+
+The problem is very interesting. It was solved in the book using Bayes theorem 
+
+p(H|D) = p(H) p(D|H) / p(D)
+
+However, it is not yet clear to me why P(D) that is the normalizing constant (Probability of seeing the data under any hypothesis) is a whole number 270? Instead of a probability ie may be P(Y|Bag1 and Bag2).
+
+The exercises from this section taken from Think Bayes github repository can be accessed from [[here]](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/blob/master/stats/day2.ipynb)
+ 
+
+
 
 ## Day 2
 
