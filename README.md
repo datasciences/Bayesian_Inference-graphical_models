@@ -14,3 +14,16 @@ After an extensive search, I found the following books are highly popular in thi
 * [[Probability theory: The logic of science]](https://github.com/terryum/awesome-deep-learning-papers)
 * Bayesian data analysis
 * Think Bayes
+
+
+Overview 
+--------
+There will be several folders and subfolders in this repository. 
+
+* A summary of the most important theory will go into [[theory folder]](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/tree/master/theory)
+* All basic statistical exercises from think bayes will go into [[stats folder]](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/tree/master/stats)
+* All practical exercises using machine learning will go into folder [[ml]](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/tree/master/ml)
+* All practical exercises using deep learning will go into folder [[dl]](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/tree/master/dl)
+* Both ml and dl folders will contain subfolders with examples, inference from R and python libraries such as Pymc3, Brms, Pyro, gpytorch or Botorch. 
+
+
