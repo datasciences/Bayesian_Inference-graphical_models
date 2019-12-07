@@ -1,1 +1,1 @@
-# Bayesian_ml_dl_workout_area with Pymc3, Pyro and Gpytorch
+# Bayesian machine learning and deep learning workout area with Brms, Pymc3, Pyro and Gpytorch
