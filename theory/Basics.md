@@ -87,6 +87,51 @@ p(H|D) = p(H) p(D|H) / p(D)
 
 However, it is not yet clear to me why P(D) that is the normalizing constant (Probability of seeing the data under any hypothesis) is a whole number 270? Instead of a probability ie may be P(Y|Bag1 and Bag2).
 
+Update: After going through the beginning of chapter 3, I understood the concept of normalizing. 
+Probability of seeing the data under any hypothesis is nothing but the probability of an event happening without having any hypothesis.
+
+ex: probability of head or tail during a coin tos is 0.5
+    probability of getting a toss from a 4, 6, 8, 12, and 20 sided die is 1/5 = 0.20
+    
+    With the example from chapter 3 dice throw
+    
+    class Dice(Pmf):    
+    def __init__(self, hypos):
+        """Initialize self.
+        """
+        Pmf.__init__(self)
+        for hypo in hypos:
+            self.Set(hypo, 1)
+        self.Normalize() # Normalizing probability
+
+    def Update(self, data):
+        """Updates the PMF with new data.
+        
+        """
+        for hypo in self.Values():
+            self[hypo] *= self.Likelihood(data, hypo)
+        self.Normalize()
+        
+        for hypo, prob in self.Items():
+            print(hypo, prob)
+            
+    def Likelihood(self, data, hypo):
+        """The likelihood of the data under the hypothesis.        
+        """
+        if hypo < data:
+            return 0
+        else:
+            return 1.0/hypo
+    
+pmf = Dice([4, 6, 8, 12, 20])
+pmf.Update(6)
+#pmf.Print()
+
+
+
+
+
+
 The exercises from this section taken from Think Bayes github repository can be accessed from [[here]](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/blob/master/stats/day2.ipynb)
  
 

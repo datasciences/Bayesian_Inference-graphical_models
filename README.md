@@ -25,5 +25,13 @@ There will be several folders and subfolders in this repository.
 * All practical exercises using machine learning will go into folder [[ml]](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/tree/master/ml)
 * All practical exercises using deep learning will go into folder [[dl]](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/tree/master/dl)
 * Both ml and dl folders will contain subfolders with examples, inference from R and python libraries such as Pymc3, Brms, Pyro, gpytorch or Botorch. 
+* ml using Pymc3
+* dl using Pymc3
+ 
+
+Talks
+------
+1) https://www.youtube.com/watch?v=HNKlytVD1Zg&t=3836s
+   Bayesian logistic regression, KL divergence, neural network code : https://github.com/chrisorm/pydata-2018/tree/master/notebooks 
 
 
