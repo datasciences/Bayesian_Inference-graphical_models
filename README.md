@@ -15,6 +15,7 @@ After an extensive search, I found the following books are highly popular in thi
 * Bayesian data analysis
 * Think Bayes
 
+If you want to learn some statistical modeling and get acquinted with statistical problem solving start with this book "https://bookdown.org/roback/bookdown-bysh/" suggested by Statistical Rethinking Record.
 
 Overview 
 --------
