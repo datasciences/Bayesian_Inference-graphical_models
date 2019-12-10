@@ -1,1 +1,0 @@
-# Random basic notes
