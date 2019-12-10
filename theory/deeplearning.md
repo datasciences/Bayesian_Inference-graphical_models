@@ -80,3 +80,12 @@ https://omegafragger.github.io/files/ociamthesismain.pdf
 Uncertainity estimation ml and dl papers and code
 -------------------
 https://github.com/ahmedmalaa/uncertainty
+
+
+Day 3
+--------------
+Incredible resources for deep learning with code
+1) https://forums.fast.ai/t/uncertainty-in-deep-learning-bayesian-networks-gaussian-processes/5551/6
+2) https://towardsdatascience.com/bayesian-deep-learning-with-fastai-how-not-to-be-uncertain-about-your-uncertainty-6a99d1aa686e
+3) https://xuwd11.github.io/Dropout_Tutorial_in_PyTorch/https://colab.research.google.com/drive/1bIFAWl_o__ZKFSVvE9994WJ2cfD9976i
+4) https://colab.research.google.com/drive/1bIFAWl_o__ZKFSVvE9994WJ2cfD9976i
