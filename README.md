@@ -31,10 +31,10 @@ Talks
 Why going bayesian is good?
 --------
 The main advantages of going bayesian are as follows:
-* Bayesian methods typically involves using probability distributions rather than point probabilities such as mean. For example for a regression problem for predicting house prices rather than predicting the price of a house, bayesian methods produces a distribution of possible predictions. 
-* Bayesian methods helps to derive credible intervals (similar to confidence interval but not the same) around using the predicted distribution around the mean. 
-* Bayesian method can utilize informed or uninformed priors. Priors are nothing but prior knowledge about the distribution of samples. 
-* Bayesian methods can work efficiently on small sample size, even in case of deep learning models.
+* Bayesian methods typically involves using probability distributions rather than point probabilities such as mean. For example for a regression problem for predicting house prices, rather than predicting the price of a house, bayesian methods produces a distribution of possible predictions. 
+* Bayesian methods helps to derive credible intervals (similar to confidence interval but not the same) around the mean using the predicted distribution.
+* Bayesian method can utilize informed or uninformed priors. Priors are nothing but prior knowledge about the distribution of samples. This is extremely useful fot getting better predictions as well as decreasing time required for traing a ML or DL model.
+* Bayesian methods work efficiently even with small sample sizes for deep learning models or machine learning models.
 * Bayesian methods account for variability in the measurement of the data
 
 
