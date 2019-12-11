@@ -19,14 +19,16 @@ Books
 If you want to learn some statistical modeling and get acquinted with statistical problem solving start with this book "https://bookdown.org/roback/bookdown-bysh/" suggested by Statistical Rethinking Record.
 
 Papers
+--------
 
 * Inference from Simulations and Monitoring Convergence: https://www.mcmchandbook.net/HandbookChapter6.pdf
 
 
-Talk
+Talks
+--------
 * https://www.youtube.com/channel/UC_LBLWLfKk5rMKDOHoO7vPQ
 
-Why going bayesian
+Why going bayesian is good?
 --------
 The main advantages of going bayesian are as follows:
 * Bayesian methods typically involves using probability distributions rather than point probabilities such as mean. For example for a regression problem for predicting house prices rather than predicting the price of a house, bayesian methods produces a distribution of possible predictions. 
@@ -43,7 +45,8 @@ Overview
 --------
 There will be several folders and subfolders in this repository. 
 
-* A summary of the most important theory will go into [[theory folder]](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/tree/master/theory)
+* A summary of the Book chapters can be accessed from subfolders [[theory folder]](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/tree/master/theory)
+* A summary of my daily notes [[theory folder]](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/tree/master/theory)
 * All basic statistical exercises from think bayes will go into [[stats folder]](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/tree/master/stats)
 * All practical exercises using machine learning will go into folder [[ml]](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/tree/master/ml)
 * All practical exercises using deep learning will go into folder [[dl]](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/tree/master/dl)
