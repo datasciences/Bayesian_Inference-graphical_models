@@ -8,15 +8,14 @@ Chapter 1
 The book assumes no prior knowledge of statistics but basics of probabilitty and calculus. The author covers how to read this book chapter by chapter. He lays out a plan that is good for different knowledge levels and time limits. 
 The contents of the chapters are given below as given in the text book:
 
-Chapter 2: The idea of Bayesian inference and model parameters. This chapter introduces important concepts; don’t skip it.
-• Chapter 3: The R programming language. Read the sections about installing the software, including the extensive set of programs that accompany this book. The rest can be skimmed and returned to later when needed.
-• Chapter 4: Basic ideas of probability. Merely skim this chapter if you have a high probability of already knowing its content.
-• Chapter 5: Bayes rule!
-• Chapter 6: The simplest formal application of Bayes rule, referenced throughout the remainder of the book.
-4 Doing Bayesian Data Analysis
-• Chapter 7: MCMC methods. This chapter explains the computing method that makes contemporary Bayesian applications possible. You don’t need to study all the mathematical details, but you should be sure to get the gist of the pictures.
-• Chapter 8: The JAGS programming language for implementing MCMC.
-• Chapter 16: Bayesian estimation of two groups. All of the foundational concepts from the aforementioned chapters, applied to the case of comparing two groups.
+1. Chapter 2: The idea of Bayesian inference and model parameters. This chapter introduces important concepts; don’t skip it.
+2. Chapter 3: The R programming language. Read the sections about installing the software, including the extensive set of programs that accompany this book. The rest can be skimmed and returned to later when needed.
+3. Chapter 4: Basic ideas of probability. Merely skim this chapter if you have a high probability of already knowing its content.
+4. Chapter 5: Bayes rule!
+5. Chapter 6: The simplest formal application of Bayes rule, referenced throughout the remainder of the book.
+6. Chapter 7: MCMC methods. This chapter explains the computing method that makes contemporary Bayesian applications possible. You don’t need to study all the mathematical details, but you should be sure to get the gist of the pictures.
+7. Chapter 8: The JAGS programming language for implementing MCMC.
+8. Chapter 16: Bayesian estimation of two groups. All of the foundational concepts from the aforementioned chapters, applied to the case of comparing two groups.
 
 Table 1 in chapter 1 also illustrates the Bayesian analogues of null hypothesis significance tests such as binomial tests, t-test etc.
 
@@ -67,7 +66,7 @@ Why do we use different chains with iterations rather than one?
 Author reply on his blog: Basically, when multiple chains show the same form, we gain confidence that the chains are not stuck or clumpy in unrepresentative regions of parameter space.Page 178 onwards, second edition. 
 
 MCMC REPRESENTATIVENESS, ACCURACY, AND EFFICIENCY
-----------------------------
+
 
 
 
