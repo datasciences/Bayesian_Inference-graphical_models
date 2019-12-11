@@ -33,6 +33,11 @@ Chapter 2
 ---------
 Introduction: Credibility, Models, and Parameters
 
+Chapter 2 goes through the basics of bayesian such as prior and posterior probabilites. You can skip this section if you already know these topics. I personally found the examples he used very simplistic and understandable, so I recommend reading it. 
+
+The first take away from the first section of the chapter is "Bayesian Inference Is Reallocation of Credibility Across Possibilities". This means when you start solving a problem using bayesian methods, you start with a hypothesis. As you get more and more data or evidence you update the prior beliefs and you get the posterior beliefs. Since we are dealing with data, you say "Prior distribution" and "Posterior distribution". One of the advantage of using a distribution rather than a mean in bayesian methods is that, you account for variability in the measurement of the data. For example: You are measuring the blood pressure of several patients, the blood pressure of the same patient can vary minutely depending on several factors. So having a model that can account for this variability is always great.
+
+
 
 
 

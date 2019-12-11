@@ -33,6 +33,7 @@ The main advantages of going bayesian are as follows:
 * Bayesian methods helps to derive credible intervals (similar to confidence interval but not the same) around using the predicted distribution around the mean. 
 * Bayesian method can utilize informed or uninformed priors. Priors are nothing but prior knowledge about the distribution of samples. 
 * Bayesian methods can work efficiently on small sample size, even in case of deep learning models.
+* Bayesian methods account for variability in the measurement of the data
 
 
 Core architecture of a bayesian method
