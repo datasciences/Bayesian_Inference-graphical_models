@@ -67,10 +67,14 @@ Author reply on his blog: Basically, when multiple chains show the same form, we
 
 MCMC REPRESENTATIVENESS, ACCURACY, AND EFFICIENCY
 
+In principle, the mathematics of MCMC guarantee that infinitely long chains will achieve a perfect representation of the posterior distribution, but unfortunately we do not have infinite time or computer memory.
 
 
+MCMC diagnostics
 
+The first method to detect unrepresentativeness is a visual examination of the chain trajectory. A graph of the sampled parameter values as a function of step in the chain is called a trace plot.
 
+The preliminary steps, during which the chain moves from its unrepresentative initial value to the modal region of the posterior, is called the burn-in period. For realistic applications, it is routine to apply a burn-in period of several hundred to several thousand steps. 
 
 
 
