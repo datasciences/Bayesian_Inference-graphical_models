@@ -18,7 +18,13 @@ Books
 
 If you want to learn some statistical modeling and get acquinted with statistical problem solving start with this book "https://bookdown.org/roback/bookdown-bysh/" suggested by Statistical Rethinking Record.
 
-Reading several blogs on the web made me feel that the field(deep learning with Bayesian) is still in it's infacncy. There are several researchers and programmers working on this topic and I really hope the field will advance over time. 
+Papers
+
+* Inference from Simulations and Monitoring Convergence: https://www.mcmchandbook.net/HandbookChapter6.pdf
+
+
+Talk
+* https://www.youtube.com/channel/UC_LBLWLfKk5rMKDOHoO7vPQ
 
 Why going bayesian
 --------
