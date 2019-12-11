@@ -1,10 +1,11 @@
 # Bayesian machine learning and deep learning workout area with Brms, Pymc3, Pyro and Gpytorch
 
-Uncertainity estimation in machine learning, deep learning and reinforcement learning methods are increasingly becoming popular due to the latest research advancements in variational inference and dropout. Reading several blogs on the web made me feel that the field(deep learning with Bayesian) is still in it's infacncy, although a lot of talented researchers, statisticians and programmers are working hard to cater the advantages of bayesian estimation to a wider audiene. 
+Uncertainity estimation in machine learning, deep learning and reinforcement learning methods are increasingly becoming popular due to the latest research advancements in variational inference and dropout methods. 
 
-With the availability of several Python and R packages and bayesian statistics books, it is good to learn the theory, then practice and implement solutions for already existing problems. I envision to use the theory and practical knowledge I would gain on projects my company would work in the future. 
+This repository will contain book chapter reviews, bayesian model implementations and resources for learning bayesian modeling. I did a rigorous research on this topic to come up with a list of most influential books and programming packages on this topic to layout a plan for my study. The list of books and packages are given below. 
 
-After an extensive search, I found the following books are highly popular in this field. 
+Books
+--------
 
 * Information Theory, Inference, and Learning Algorithms
 * Gaussian process for machine learning
@@ -16,6 +17,20 @@ After an extensive search, I found the following books are highly popular in thi
 * Think Bayes
 
 If you want to learn some statistical modeling and get acquinted with statistical problem solving start with this book "https://bookdown.org/roback/bookdown-bysh/" suggested by Statistical Rethinking Record.
+
+Reading several blogs on the web made me feel that the field(deep learning with Bayesian) is still in it's infacncy. There are several researchers and programmers working on this topic and I really hope the field will advance over time. 
+
+Why going bayesian
+--------
+The main advantages of going bayesian are as follows:
+* Bayesian methods typically involves using probability distributions rather than point probabilities such as mean. For example for a regression problem for predicting house prices rather than predicting the price of a house, bayesian methods produces a distribution of possible predictions. 
+* Bayesian methods helps to derive credible intervals (similar to confidence interval but not the same) around using the predicted distribution around the mean. 
+* Bayesian method can utilize informed or uninformed priors. Priors are nothing but prior knowledge about the distribution of samples. 
+* Bayesian methods can work efficiently on small sample size, even in case of deep learning models.
+
+
+Core architecture of a bayesian method
+--------
 
 Overview 
 --------
