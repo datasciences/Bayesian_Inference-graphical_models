@@ -83,6 +83,10 @@ Gaussian processes are a powerful tool in the machine learning toolbox.They allo
 10. https://sigopt.com/blog/intuition-behind-gaussian-processes
 11. http://www.tmpl.fi/gp/
 12. https://towardsdatascience.com/using-bayesian-modeling-to-improve-price-elasticity-accuracy-8748881d99ba
+13. https://distill.pub/2019/visual-exploration-gaussian-processes/
+14. https://ax.dev/docs/bayesopt.html#a-closer-look-at-gaussian-processes
+15. A tutorial on Bayesian optimization using gaussian process: https://arxiv.org/pdf/1807.02811.pdf
+16. https://ax.dev/docs/bayesopt
 
 
 Link between Bayesian inference, Gaussian processes and deep learning
