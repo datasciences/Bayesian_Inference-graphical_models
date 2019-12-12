@@ -1,5 +1,7 @@
 # Bayesian machine learning and deep learning workout area with Brms, Pymc3, Pyro and Gpytorch
 
+![GitHub Logo](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/blob/master/images/Bayesian.jpg)
+
 Uncertainity estimation in machine learning, deep learning and reinforcement learning methods are increasingly becoming popular due to the latest research advancements in variational inference and dropout methods. 
 
 This repository will contain book chapter reviews, bayesian model implementations and resources for learning bayesian modeling. I did a rigorous research on this topic to come up with a list of most influential books and programming packages on this topic to layout a plan for my study. The list of books and packages are listed under Books. 
