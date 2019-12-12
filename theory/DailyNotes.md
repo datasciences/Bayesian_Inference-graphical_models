@@ -251,15 +251,14 @@ Chapter 1
 The book assumes no prior knowledge of statistics but basics of probabilitty and calculus. The author covers how to read this book chapter by chapter. He lays out a plan that is good for different knowledge levels and time limits. 
 The contents of the chapters are given below as given in the text book:
 
-Chapter 2: The idea of Bayesian inference and model parameters. This chapter introduces important concepts; don’t skip it.
-• Chapter 3: The R programming language. Read the sections about installing the software, including the extensive set of programs that accompany this book. The rest can be skimmed and returned to later when needed.
-• Chapter 4: Basic ideas of probability. Merely skim this chapter if you have a high probability of already knowing its content.
-• Chapter 5: Bayes rule!
-• Chapter 6: The simplest formal application of Bayes rule, referenced throughout the remainder of the book.
-4 Doing Bayesian Data Analysis
-• Chapter 7: MCMC methods. This chapter explains the computing method that makes contemporary Bayesian applications possible. You don’t need to study all the mathematical details, but you should be sure to get the gist of the pictures.
-• Chapter 8: The JAGS programming language for implementing MCMC.
-• Chapter 16: Bayesian estimation of two groups. All of the foundational concepts from the aforementioned chapters, applied to the case of comparing two groups.
+1. Chapter 2: The idea of Bayesian inference and model parameters. This chapter introduces important concepts; don’t skip it.
+2. Chapter 3: The R programming language. Read the sections about installing the software, including the extensive set of programs that accompany this book. The rest can be skimmed and returned to later when needed.
+3. Chapter 4: Basic ideas of probability. Merely skim this chapter if you have a high probability of already knowing its content.
+4. Chapter 5: Bayes rule!
+5. Chapter 6: The simplest formal application of Bayes rule, referenced throughout the remainder of the book.
+6. Chapter 7: MCMC methods. This chapter explains the computing method that makes contemporary Bayesian applications possible. You don’t need to study all the mathematical details, but you should be sure to get the gist of the pictures.
+7. Chapter 8: The JAGS programming language for implementing MCMC.
+8. Chapter 16: Bayesian estimation of two groups. All of the foundational concepts from the aforementioned chapters, applied to the case of comparing two groups.
 
 Table 1 in chapter 1 also illustrates the Bayesian analogues of null hypothesis significance tests such as binomial tests, t-test etc.
 
@@ -297,8 +296,9 @@ virtually equal prior credibility across a vast range of possible values for the
 The fourth step is interpreting the posterior distribution. Bayesian inference has reallocated credibility across parameter values, from the vague prior distribution, to values that are consistent with the data. The posterior distribution indicates combinations of β0, β1, and σ that together are credible, given the data. 
 
 
-Chapter 7
 
+Chapter 7
+---------
 Markov chain monte carlo (MCMC)
 
 Assessing the properties of a target distribution by generating representative random values is a case of a Monte Carlo simulation. Any simulation that samples a lot of random values from a distribution is called a Monte Carlo simulation. The Metropolis algorithm and Gibbs sampling are specific types of Monte Carlo
@@ -309,4 +309,15 @@ Why do we use different chains with iterations rather than one?
 Author reply on his blog: Basically, when multiple chains show the same form, we gain confidence that the chains are not stuck or clumpy in unrepresentative regions of parameter space.Page 178 onwards, second edition. 
 
 MCMC REPRESENTATIVENESS, ACCURACY, AND EFFICIENCY
-----------------------------
+
+In principle, the mathematics of MCMC guarantee that infinitely long chains will achieve a perfect representation of the posterior distribution, but unfortunately we do not have infinite time or computer memory.
+
+
+MCMC diagnostics
+
+The first method to detect unrepresentativeness is a visual examination of the chain trajectory. A graph of the sampled parameter values as a function of step in the chain is called a trace plot.
+
+The preliminary steps, during which the chain moves from its unrepresentative initial value to the modal region of the posterior, is called the burn-in period. For realistic applications, it is routine to apply a burn-in period of several hundred to several thousand steps. 
+
+
+ # Day 4
