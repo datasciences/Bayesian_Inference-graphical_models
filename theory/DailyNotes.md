@@ -320,4 +320,77 @@ The first method to detect unrepresentativeness is a visual examination of the c
 The preliminary steps, during which the chain moves from its unrepresentative initial value to the modal region of the posterior, is called the burn-in period. For realistic applications, it is routine to apply a burn-in period of several hundred to several thousand steps. 
 
 
- # Day 4
+ # Day 5
+Completed watching Markov chain explanation, MCMC diagnostics, MCMC posterior checks and reading page numbers 180-184 from doing bayesian data analysis. 
+Went through several discussion forums to understand the core difference and advantages of each programming language such as Pymc3, Pyro and Gpytorch. 
+It has come to my understanding that Pymc3 uses theano underthe hood. They have plans to change the engine with either tensorflow, pytorch or pyro in the newer version Pymc4 I guess. One of the difficulty they say in switching to pytorch is it uses dynamic computational graphs wheras as bayesian models of pymc3 is better suited for static computational graphs. 
+
+Pyro and gpytorch uses pytorch as it's engine and both has its advantages. Gpytorch is a deep bayesian kernal method whereas Pyro is a deep bayesian probabilistic frame work. There are some examples in the documentation of gpytorch that made use of SVI, ELBO and Adam from pyro. It is not clear why simple variational inference are executed using Pyro in gpytorch. It could be that it is an example to show how both frameworks can be combined. 
+
+I decided to spend my time reading statistical rethiking and follow the code in the repository https://fehiepsi.github.io/rethinking-pyro/08-markov-chain-monte-carlo.html. This book has the advantage that it has implementations available chapterwise for brms, pyro and pymc3. It would be easy to switch between frameworks if I don't understand something. 
+
+From the discussion below it seems that Pyro has some advantage. Ref: https://github.com/pyro-ppl/pyro/issues/1265
+
+fehiepsi: It was a great conversation! Because I didn't say much during the talk, I'd like to take this chance to share some of Pyro GP's features which might be helpful for your plan:
+Beside SVI, Pyro GP also supports HMC.
+For deep kernel learning, Cornell GPytorch uses low dimensional outputs of a pre-trained neural network to feed into a GP model. On the other hand, Pyro GP can train both network's parameters and GP's hyperparameters at the same time. For example, https://github.com/uber/pyro/blob/dev/examples/contrib/gp/sv-dkl.py illustrates how to achieve it. It just takes a few lines of code to make that combination (lines 97, 98, and 103). The speed is also fast because things are trained in mini-batch.
+The mean function is also flexible to define. It can be a neural network, and you can use SVI to learn its parameters. This is useful when we want to define a deep GP model and want to make this mean function play the role of 'skip layer' as in the doubly stochastic SVI paper. After my vacation, I'll write a tutorial replicating that paper to illustrate how to compose GP models using Pyro GP.
+We can seamlessly set priors/constraints for hyperparameters using PyTorch/Pyro's distributions and distributions.constraints modules.
+If we want to fix a hyperparameter (e.g. lengthscale), we just call kernel.fix_param("lengthscale").
+Traditional sparse GPR models such as FITC, DTC are available. But I put more weights on variational sparse approach because it can be trained in mini-batch and is compatible to arbitrary likelihood.
+From our discussion, I guess what currently lacked from Pyro GP are:
+KISSGP + LOVE, which has been well developed in Cornell GPytorch.
+Using CG solve (in addition to the current Cholesky + triangle solve).
+More sophisticated kernel configurations from Uber GPytorch.
+I have read the GPytorch's GP regression tutorial. It seems the first thing to do is to use pyro.module/pyro.random_model on model to register its parameter or Pyro.optim. The loss can be added to a Pyro model to be learned under SVI/HMC using Bernoulli trick. Then, the next thing is to replace/inherit gpytorch.priors.SmoothedBoxPrior to make it compatible with PyTorch/Pyro's Distribution (so log_lengthscale_prior can be learned using pyro.param/pyro.sample).
+
+
+@jacobrgardner: Just to clarify, GPyTorch absolutely trains the network parameters and GP hyperparameters simultaneously. This is largely the point and strength of DKL. In the MNIST example we start by pretraining just to show it is possible, but then the model is trained jointly. In the LOVE + SKI notebook we demonstrate training a deep kernel model from scratch, and we have several DKL CIFAR10 and CIFAR100 models trained end to end from scratch.
+Edit: If it is helpful, I just added a tutorial on training a DKL + DenseNet model from scratch on CIFAR10 and CIFAR 100 at https://github.com/cornellius-gp/gpytorch/blob/master/examples/DKL_DenseNet_CIFAR_Tutorial.ipynb 😃
+
+
+Sampling Hyperparamters with GPyTorch + NUTS
+-----------------
+1. https://github.com/cornellius-gp/gpytorch/blob/master/examples/01_Simple_GP_Regression/Simple_GP_Regression_Fully_Bayesian.ipynb
+2. http://pyro.ai/numpyro/gp.html
+
+
+All gpytorch examples can be found here. 
+https://github.com/cornellius-gp/gpytorch/tree/master/examples
+
+
+Day 6
+------------
+On the 6th day, I feel very confused. Yes, Going through several materials at this pace can be overwhelming. Though I wanted to start learning Pyro and gpytorch, pymc3 commands are more readable and understandable. At this moment I am feeling to stick with pymc3 just because i wanted to understand the concepts in detail rather than a package, Be it sampling, the challenges in drawing sampling,  SVI,  NUTS or MCMC, Pymc3 has good tutorials with explanations for my level of understanding. So let's see some pymc3 examples:
+
+https://www.marsja.se/probabilistic-programming-in-python/
+
+
+Day 7
+-------
+left Skewed mean will b less than median
+samplingdistribution of sample mean
+when u take infinitely smaller interval it becomes a density curve
+rectangular box, you can calculate the area using
+
+Univariate Vs. Multivariate Distribution[Referece]
+Uncategorized
+
+A univariate distribution refers to the distribution of a single random variable. Note that the above characteristics we saw of a normal distribution are for the distribution of one normal random variable, representing a univariate distribution.
+
+On the other hand, a multivariate distribution refers to the probability distribution of a group of random variables. For example, a multivariate normal distribution is used to specify the probabilities of returns of a group of n stocks. This has relevance because the returns of different stocks in the group influence each other’s behaviour, that is, the behaviour of one random variable in the group is influenced by the behaviour of another variable.
+
+How to Construct Multivariate Distribution?
+
+For discrete random variables, joint probabilities are used to describe the multivariate distribution
+
+For continuous random variables, if each random variable follows a normal distribution, a multivariate normal distribution is created. Remember that a linear combination of 2 or more normally distributed random variables is also normally distributed.
+
+If we want to describe the multivariate normal distribution of the returns of a group of stocks, we need the following three parameters:
+
+List of means returns of each stock
+List of variances of returns of each stock
+List of correlations between each pair of stocks.
+A univariate normal distribution is described using just the two variables namely mean and variance. For a multivariate distribution we need a third variable, i.e., the correlation between each pair of random variables. This is what distinguishes a multivariate distribution from a univariate distribution. If there are n random variables in the group, we will have n*(n-1)/2 pairs of correlations.
+
+Distributions in statistics [https://financetrain.com/series/distributions-frm/] [Full Tutorials: https://financetrain.com/series/]

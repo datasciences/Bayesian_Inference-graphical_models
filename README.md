@@ -67,7 +67,9 @@ Talks
    Bayesian logistic regression, KL divergence, neural network code : https://github.com/chrisorm/pydata-2018/tree/master/notebooks 
 
 
-
+Blog
+--------
+1. http://fastml.com/bayesian-machine-learning/
 
 Gaussian Processes 
 -------------
@@ -91,7 +93,54 @@ Gaussian processes are a powerful tool in the machine learning toolbox.They allo
 16. https://ax.dev/docs/bayesopt
 
 
+Blog
+------
+https://medium.com/panoramic/gaussian-processes-for-little-data-2501518964e4
+
+
 Link between Bayesian inference, Gaussian processes and deep learning
 ----------------------------------------------
 1. Deep Neural Networks as Gaussian Processes  [PDF] Lee, J., Sohl-Dickstein, J., Pennington, J., Novak, R., Schoenholz, S. and Bahri, Y., 2018. International Conference on Learning Representations.
 2. Deep Gaussian Processes  [PDF] Damianou, A. and Lawrence, N., 2013. Proceedings of the Sixteenth International Conference on Artificial Intelligence and Statistics, Vol 31, pp. 207--215. PMLR.
+
+
+Further Reading [Ref: https://medium.com/@Petuum/intro-to-modern-bayesian-learning-and-probabilistic-programming-c61830df5c50]
+---------------
+The following are some recommended papers cited throughout this blog post, broken down into categories:
+Scalable Bayesian inference algorithms:
+[1] Bayesian Learning via Stochastic Gradient Langevin Dynamics
+[2] Stochastic Gradient Hamiltonian Monte Carlo
+[3] Big Learning with Bayesian Methods
+Parallel and distributed Bayesian inference algorithms:
+[4] Asymptotically Exact, Embarrassingly Parallel MCMC
+[5] Parallelizing MCMC via Weierstrass Sampler
+[6] Scalable and Robust Bayesian Inference via the Median Posterior
+Variational approximations and amortized inference:
+[7] Variational Inference: A Review for Statisticians
+[8] Stochastic Variational Inference
+[9] Stochastic Backpropagation and Approximate Inference in Deep Generative Models
+[10] Auto-Encoding Variational Bayes
+Deep Bayesian learning:
+[11] Deep Probabilistic Programming
+[12] Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning
+[13] Bayesian Convolutional Neural Networks with Bernoulli Approximate Variational Inference
+Simulators:
+[14] Automatic Inference for Inverting Software Simulators via Probabilistic Programming
+[15] Improvements to Inference Compilation for Probabilistic Programming in Large-Scale Scientific Simulators
+Visual graphics:
+[16] Approximate Bayesian Image Interpretation using Generative Probabilistic Graphics Programs
+[17] Picture: A Probabilistic Programming Language for Scene Perception
+Universal probabilistic programming:
+[18] Venture: a higher-order probabilistic programming platform with programmable inference
+[19] A New Approach to Probabilistic Programming Inference
+[20] Inference Compilation and Universal Probabilistic Programming
+Verification, testing, quality assurance:
+[21] Debugging probabilistic programs
+[22] Testing Probabilistic Programming Systems
+Usability:
+[23] BayesDB: A probabilistic programming system for querying the probable implications of data
+[24] Probabilistic Programs as Spreadsheet Queries
+[25] Spreadsheet Probabilistic Programming
+Ecosystem and modularity:
+[26] Tensorflow probability
+[27] Pyro
