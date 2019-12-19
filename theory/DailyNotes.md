@@ -1,7 +1,6 @@
 # Random basic notes
 
 
-
 Uncertainity estimation in machine learning, deep learning and reinforcement learning methods are increasingly becoming popular due to the latest research advancements in variational inference and dropout. Reading several blogs on the web made me feel that the field(deep learning with Bayesian) is still in it's infacncy, although a lot of talented researchers, statisticians and programmers are working hard to cater the advantages of bayesian estimation to a wider audiene. 
 
 With the availability of several Python and R packages and bayesian statistics books, it is good to learn the theory, then practice and implement solutions for already existing problems. I envision to use the theory and practical knowledge I would gain on projects my company would work in the future. 
@@ -301,8 +300,19 @@ Chapter 7
 ---------
 Markov chain monte carlo (MCMC)
 
-Assessing the properties of a target distribution by generating representative random values is a case of a Monte Carlo simulation. Any simulation that samples a lot of random values from a distribution is called a Monte Carlo simulation. The Metropolis algorithm and Gibbs sampling are specific types of Monte Carlo
-process. They generate random walks such that each step in the walk is completely independent of the steps before the current position. Any such process in which each step has no memory for states before the current one is called a (first-order) Markov process, and a succession of such steps is a Markov chain (named after the mathematician Andrey Markov, 1856–1922). The Metropolis algorithm and Gibbs sampling are examples of a Markov chain Monte Carlo (MCMC) process.
+Assessing the properties of a target distribution by generating representative random values is a case of a Monte Carlo simulation. Any simulation that samples a lot of random values from a distribution is called a Monte Carlo simulation. The Metropolis algorithm and Gibbs sampling are specific types of Monte Carlo process. They generate random walks such that each step in the walk is completely independent of the steps before the current position. Any such process in which each step has no memory for states before the current one is called a (first-order) Markov process, and a succession of such steps is a Markov chain (named after the mathematician Andrey Markov, 1856–1922). The Metropolis algorithm and Gibbs sampling are examples of a Markov chain Monte Carlo (MCMC) process.
+
+*Markov chain monte carlo
+
+![GitHub Logo](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/blob/master/images/MCMC.jpg)
+Markov chain monte carlo consists of three parts. 
+1. Monte carlo
+2. Markov chain
+3. Decision making
+
+In the first step, using Monte carlo method random variable can be drawn from an assigned prior distribution. 
+In the second step, we make use of a markov chain. Markov chain is nothing but a stochastic process in which a chain of random variables are drawn based on the target distribution and the optimizing function. The chain is run for 2000 or more interations to search the parameter distribution space for random sampling. You have to run the chain several times (defaults to 4 chains in most packages) and compare the behaviour of the chains to understand if the convergence of the algorithm is good enough. For an initial time period called "warm-up phase" the chain tries to find optimal path and stabilizes. Once it stabilizes, the chain continues and you call it sampling phase. Usually the warm up phase is discarded. 
+In the third step of decision making, each time when the markov chain randomly sample a new point from the parameter space, the ratio betweeen the specified (likelyhood * prior) for both t and t-1 is calculated. Further, a uniform random variable is drawn to check if the ratio is greater than the uniform random variable. If the ratio is higher the new random sample drawn by the markov chain is accepted. The process runs untill the posterior distribution approximates the target distribution. 
 
 Why do we use different chains with iterations rather than one? 
 --------------------
@@ -368,17 +378,7 @@ https://www.marsja.se/probabilistic-programming-in-python/
 
 Day 7
 -------
-left Skewed mean will b less than median
-samplingdistribution of sample mean
-when u take infinitely smaller interval it becomes a density curve
-rectangular box, you can calculate the area using
-
-Univariate Vs. Multivariate Distribution[Referece]
-Uncategorized
-
-A univariate distribution refers to the distribution of a single random variable. Note that the above characteristics we saw of a normal distribution are for the distribution of one normal random variable, representing a univariate distribution.
-
-On the other hand, a multivariate distribution refers to the probability distribution of a group of random variables. For example, a multivariate normal distribution is used to specify the probabilities of returns of a group of n stocks. This has relevance because the returns of different stocks in the group influence each other’s behaviour, that is, the behaviour of one random variable in the group is influenced by the behaviour of another variable.
+A univariate distribution refers to the distribution of a single random variable. On the other hand, a multivariate distribution refers to the probability distribution of a group of random variables. For example, a multivariate normal distribution is used to specify the probabilities of returns of a group of n stocks. This has relevance because the returns of different stocks in the group influence each other’s behaviour, that is, the behaviour of one random variable in the group is influenced by the behaviour of another variable.
 
 How to Construct Multivariate Distribution?
 
@@ -391,6 +391,14 @@ If we want to describe the multivariate normal distribution of the returns of a 
 List of means returns of each stock
 List of variances of returns of each stock
 List of correlations between each pair of stocks.
+
 A univariate normal distribution is described using just the two variables namely mean and variance. For a multivariate distribution we need a third variable, i.e., the correlation between each pair of random variables. This is what distinguishes a multivariate distribution from a univariate distribution. If there are n random variables in the group, we will have n*(n-1)/2 pairs of correlations.
 
 Distributions in statistics [https://financetrain.com/series/distributions-frm/] [Full Tutorials: https://financetrain.com/series/]
+
+Law of large numbers. 
+
+
+Day 8
+---------
+I was really busy with revising all the topics I have studies so far and gettting a better intution behind all the algorithms that I learned. I decided to focus on text books "Doing Bayesian data analysis" and "Statistical rethinking". Both the books have examples in Pymc3. I build a couple of models in pymc3 making use of the knowledge I learned from different resources. I also read chapter 29 of Information theory, inference and learning algorithms. In the next 2 weeks, I plan to get a thorough understanding of probability theory mathematics part, try out few machine learning problems using pymc3 by reading the books I mentioned. 
