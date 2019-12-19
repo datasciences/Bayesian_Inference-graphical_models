@@ -304,7 +304,7 @@ Assessing the properties of a target distribution by generating representative r
 
 *Markov chain monte carlo
 
-![GitHub Logo](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/blob/master/images/MCMC.jpg)
+![GitHub Logo](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/blob/master/images/MCMC.PNG)
 Markov chain monte carlo consists of three parts. 
 1. Monte carlo
 2. Markov chain
