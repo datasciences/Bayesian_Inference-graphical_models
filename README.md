@@ -108,39 +108,44 @@ Further Reading [Ref: https://medium.com/@Petuum/intro-to-modern-bayesian-learni
 ---------------
 The following are some recommended papers cited throughout this blog post, broken down into categories:
 Scalable Bayesian inference algorithms:
-[1] Bayesian Learning via Stochastic Gradient Langevin Dynamics
-[2] Stochastic Gradient Hamiltonian Monte Carlo
-[3] Big Learning with Bayesian Methods
+1. Bayesian Learning via Stochastic Gradient Langevin Dynamics
+2. Stochastic Gradient Hamiltonian Monte Carlo
+3. Big Learning with Bayesian Methods
 Parallel and distributed Bayesian inference algorithms:
-[4] Asymptotically Exact, Embarrassingly Parallel MCMC
-[5] Parallelizing MCMC via Weierstrass Sampler
-[6] Scalable and Robust Bayesian Inference via the Median Posterior
+4. Asymptotically Exact, Embarrassingly Parallel MCMC
+5. Parallelizing MCMC via Weierstrass Sampler
+6. Scalable and Robust Bayesian Inference via the Median Posterior
 Variational approximations and amortized inference:
-[7] Variational Inference: A Review for Statisticians
-[8] Stochastic Variational Inference
-[9] Stochastic Backpropagation and Approximate Inference in Deep Generative Models
-[10] Auto-Encoding Variational Bayes
+7. Variational Inference: A Review for Statisticians
+8. Stochastic Variational Inference
+9. Stochastic Backpropagation and Approximate Inference in Deep Generative Models
+10. Auto-Encoding Variational Bayes
 Deep Bayesian learning:
-[11] Deep Probabilistic Programming
-[12] Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning
-[13] Bayesian Convolutional Neural Networks with Bernoulli Approximate Variational Inference
+11. Deep Probabilistic Programming
+12. Dropout as a Bayesian Approximation: Representing Model Uncertainty in Deep Learning
+13. Bayesian Convolutional Neural Networks with Bernoulli Approximate Variational Inference
 Simulators:
-[14] Automatic Inference for Inverting Software Simulators via Probabilistic Programming
-[15] Improvements to Inference Compilation for Probabilistic Programming in Large-Scale Scientific Simulators
+14. Automatic Inference for Inverting Software Simulators via Probabilistic Programming
+15. Improvements to Inference Compilation for Probabilistic Programming in Large-Scale Scientific Simulators
 Visual graphics:
-[16] Approximate Bayesian Image Interpretation using Generative Probabilistic Graphics Programs
-[17] Picture: A Probabilistic Programming Language for Scene Perception
+16. Approximate Bayesian Image Interpretation using Generative Probabilistic Graphics Programs
+17. Picture: A Probabilistic Programming Language for Scene Perception
 Universal probabilistic programming:
-[18] Venture: a higher-order probabilistic programming platform with programmable inference
-[19] A New Approach to Probabilistic Programming Inference
-[20] Inference Compilation and Universal Probabilistic Programming
+18. Venture: a higher-order probabilistic programming platform with programmable inference
+19. A New Approach to Probabilistic Programming Inference
+20. Inference Compilation and Universal Probabilistic Programming
 Verification, testing, quality assurance:
-[21] Debugging probabilistic programs
-[22] Testing Probabilistic Programming Systems
+21. Debugging probabilistic programs
+22. Testing Probabilistic Programming Systems
 Usability:
-[23] BayesDB: A probabilistic programming system for querying the probable implications of data
-[24] Probabilistic Programs as Spreadsheet Queries
-[25] Spreadsheet Probabilistic Programming
+23. BayesDB: A probabilistic programming system for querying the probable implications of data
+24. Probabilistic Programs as Spreadsheet Queries
+25. Spreadsheet Probabilistic Programming
 Ecosystem and modularity:
-[26] Tensorflow probability
-[27] Pyro
+26. Tensorflow probability
+27. Pyro
+
+
+A collection of recent papers in Variational Inference
+-----------------------------
+1. https://github.com/otokonoko8/implicit-variational-inference

@@ -402,3 +402,7 @@ Law of large numbers.
 Day 8
 ---------
 I was really busy with revising all the topics I have studies so far and gettting a better intution behind all the algorithms that I learned. I decided to focus on text books "Doing Bayesian data analysis" and "Statistical rethinking". Both the books have examples in Pymc3. I build a couple of models in pymc3 making use of the knowledge I learned from different resources. I also read chapter 29 of Information theory, inference and learning algorithms. In the next 2 weeks, I plan to get a thorough understanding of probability theory mathematics part, try out few machine learning problems using pymc3 by reading the books I mentioned. 
+
+
+Enricho suggested to listen to this video: https://www.youtube.com/watch?v=R6d-AbkhBQ8
+
