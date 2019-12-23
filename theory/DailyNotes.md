@@ -406,3 +406,52 @@ I was really busy with revising all the topics I have studies so far and getttin
 
 Enricho suggested to listen to this video: https://www.youtube.com/watch?v=R6d-AbkhBQ8
 
+
+Day 9
+---------
+I was busy preparing a presentation that summarizes my learnings for any beginner. It covers introduction to probability theory, distributions, intuitive examples, sampling, types of sampling, Metropolis hasting algorithm, probability exercise, bayesian reallocation exercise, pymc3 exercises with real world data. You can access it here: 
+https://docs.google.com/presentation/d/1Bb-M69vHNezFNsmJKcjSqpNokWxAdc7j-kFfkfPve-A/edit?usp=sharing
+
+Day 10
+---------
+I am currently focusing on understanding different sampling techniques indepth like metropolis hastings and variational inference. You can read a great introduction to MCMC and MH here:
+
+Reference: https://bair.berkeley.edu/blog/2017/08/02/minibatch-metropolis-hastings/
+
+Stochastic Gradient Descent (SGD) has been the engine fueling the development of large-scale models for these datasets. SGD is remarkably well-suited to large datasets: it estimates the gradient of the loss function on a full dataset using only a fixed-sized minibatch, and updates a model many times with each pass over the dataset.
+
+But SGD has limitations. When we construct a model, we use a loss function Lθ(x) with dataset x and model parameters θ and attempt to minimize the loss by gradient descent on θ. This shortcut approach makes optimization easy, but is vulnerable to a variety of problems including over-fitting, excessively sensitive coefficient values, and possibly slow convergence. A more robust approach is to treat the inference problem for θ as a full-blown posterior inference, deriving a joint distribution p(x,θ) from the loss function, and computing the posterior p(θ|x). This is the Bayesian modeling approach, and specifically the Bayesian Neural Network approach when applied to deep models. This recent tutorial by Zoubin Ghahramani discusses some of the advantages of this approach.
+
+The model posterior p(θ|x) for most problems is intractable (no closed form). There are two methods in Machine Learning to work around intractable posteriors: Variational Bayesian methods and Markov Chain Monte Carlo (MCMC). In variational methods, the posterior is approximated with a simpler distribution (e.g. a normal distribution) and its distance to the true posterior is minimized. In MCMC methods, the posterior is approximated as a sequence of correlated samples (points or particle densities). Variational Bayes methods have been widely used but often introduce significant error — see this recent comparison with Gibbs Sampling, also Figure 3 from the Variational Autoencoder (VAE) paper. Variational methods are also more computationally expensive than direct parameter SGD (it’s a small constant factor, but a small constant times 1-10 days can be quite important).
+
+MCMC methods have no such bias. You can think of MCMC particles as rather like quantum-mechanical particles: you only observe individual instances, but they follow an arbitrarily-complex joint distribution. By taking multiple samples you can infer useful statistics, apply regularizing terms, etc. But MCMC methods have one over-riding problem with respect to large datasets: other than the important class of conjugate models which admit Gibbs sampling, there has been no efficient way to do the Metropolis-Hastings tests required by general MCMC methods on minibatches of data (we will define/review MH tests in a moment). In response, researchers had to design models to make inference tractable, e.g. Restricted Boltzmann Machines (RBMs) use a layered, undirected design to make Gibbs sampling possible. In a recent breakthrough, VAEs use variational methods to support more general posterior distributions in probabilistic auto-encoders. But with VAEs, like other variational models, one has to live with the fact that the model is a best-fit approximation, with (usually) no quantification of how close the approximation is. Although they typically offer better accuracy, MCMC methods have been sidelined recently in auto-encoder applications, lacking an efficient scalable MH test.
+
+A bridge between SGD and Bayesian modeling has been forged recently by papers on Stochastic Gradient Langevin Dynamics (SGLD) and Stochastic Gradient Hamiltonian Monte Carlo (SGHMC). These methods involve minor variations to typical SGD updates which generate samples from a probability distribution which is approximately the Bayesian model posterior p(θ|x). These approaches turn SGD into an MCMC method, and as such require Metropolis-Hastings (MH) tests for accurate results, the topic of this blog post.
+
+Because of these developments, interest has warmed recently in scalable MCMC and in particular in doing the MH tests required by general MCMC models on large datasets. Normally an MH test requires a scan of the full dataset and is applied each time one wants a data sample. Clearly for large datasets, it’s intractable to do this. Two papers from ICML 2014, Korattikara et al. and Bardenet et al., attempt to reduce the cost of MH tests. They both use concentration bounds, and both achieve constant-factor improvements relative to a full dataset scan. Other recent work improves performance but makes even stronger assumptions about the model which limits applicability, especially for deep networks. None of these approaches come close to matching the performance of SGD, i.e. generating a posterior sample from small constant-size batches of data.
+
+In this post we describe a new approach to MH testing which moves the cost of MH testing from O(N) to O(1) relative to dataset size. It avoids the need for global statistics and does not use tail bounds (which lead to long-tailed distributions for the amount of data required for a test). Instead we use a novel correction distribution to directly “morph” the distribution of a noisy minibatch estimator into a smooth MH test distribution. Our method is a true “black-box” method which provides estimates on the accuracy of each MH test using only data from a small expected size minibatch. It can even be applied to unbounded data streams. It can be “piggy-backed” on existing SGD implementations to provide full posterior samples (via SGLD or SGHMC) for almost the same cost as SGD samples. Thus full Bayesian neural network modeling is now possible for about the same cost as SGD optimization. Our approach is also a potential substitute for variational methods and VAEs, providing unbiased posterior samples at lower cost.
+
+To explain the approach, we review the role of MH tests in MCMC models.
+
+Markov Chain Monte Carlo Review
+Markov Chains
+MCMC methods are designed to sample from a target distribution which is difficult to compute. To generate samples, they utilize Markov Chains, which consist of nodes representing states of the system and probability distributions for transitioning from one state to another.
+
+A key concept is the Markovian assumption, which states that the probability of being in a state at time t+1 can be inferred entirely based on the current state at time t. Mathematically, letting θt represent the current state of the Markov chain at time t, we have p(θt+1|θt,…,θ0)=p(θt+1|θt). By using these probability distributions, we can generate a chain of samples (θi)Ti=1 for some large T.
+
+Since the probability of being in state θt+1 directly depends on θt, the samples are correlated. Rather surprisingly, it can be shown that, under mild assumptions, in the limit of many samples the distribution of the chain’s samples approximates the target distribution.
+
+A full review of MCMC methods is beyond the scope of this post, but a good reference is the Handbook of Markov Chain Monte Carlo (2011). Standard machine learning textbooks such as Koller & Friedman (2009) and Murphy (2012) also cover MCMC methods.
+
+Metropolis-Hastings
+One of the most general and powerful MCMC methods is Metropolis-Hastings. This uses a test to filter samples. To define it properly, let p(θ) be the target distribution we want to approximate. In general, it’s intractable to sample directly from it. Metropolis-Hastings uses a simpler proposal distribution q(θ′|θ) to generate samples. Here, θ represents our current sample in the chain, and θ′ represents the proposed sample. For simple cases, it’s common to use a Gaussian proposal centered at θ.
+
+If we were to just use a Gaussian to generate samples in our chain, there’s no way we could approximate our target p, since the samples would form a random walk. The MH test cleverly resolves this by filtering samples with the following test. Draw a uniform random variable u∈[0,1] and determine whether the following is true:
+
+u<?min{p(θ′)q(θ|θ′)p(θ)q(θ′|θ),1}
+If true, we accept θ′. Otherwise, we reject and reuse the old sample θ. Notice that
+
+It doesn’t require knowledge of a normalizing constant (independent of θ and θ′), because that cancels out in the p(θ′)/p(θ) ratio. This is great, because normalizing constants are arguably the biggest reason why distributions become intractable.
+The higher the value of p(θ′), the more likely we are to accept.
+To get more intuition on how the test works, we’ve created the following figure from this Jupyter Notebook, showing the progression of samples to approximate a target posterior. This example is derived from Welling & Teh (2011).
