@@ -500,6 +500,7 @@ I also went through the mathematical steps of understanding maximizing KL diverg
 3. https://chrisorm.github.io/tags.html#Variational-Inference-ref
 4. https://chrisorm.github.io/VI-Why.html
 5. https://www.coursera.org/lecture/bayesian-methods-in-machine-learning/learning-with-priors-0mkuB
+6. https://chrisorm.github.io/VI-Why.html
 
 Having a good understanding of probability density functions seemed important here. I brushed up my knowledge from this source:
 https://betanalpha.github.io/assets/case_studies/probability_theory.html#42_probability_density_functions
@@ -521,3 +522,10 @@ If the measurable transformation is many-to-one then we have to take into accoun
 π∗(y)=∑n=1Nπ(xn(y))|J(xn(y))|−1=∑n=1Nπ(xn(y))∣∣∣∂g∂x(xn(y))∣∣∣−1.
 
 Deriving the pushforward probability density function for transformations that change the dimensionality of the space, such as marginalizations, are more challenging and require analytically integrating an appropriately reparameterized probability density function over the complementary spaces.
+
+Evidence lower bound
+-------------------
+Ref: https://www.youtube.com/watch?v=2pEkWk-LHmU
+![VI1](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/blob/master/images/kl.png)
+![VI2](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/blob/master/images/jensen.png)
+![VI3](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/blob/master/images/elbo.png)
