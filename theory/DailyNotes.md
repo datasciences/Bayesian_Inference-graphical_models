@@ -455,3 +455,69 @@ If true, we accept θ′. Otherwise, we reject and reuse the old sample θ. Noti
 It doesn’t require knowledge of a normalizing constant (independent of θ and θ′), because that cancels out in the p(θ′)/p(θ) ratio. This is great, because normalizing constants are arguably the biggest reason why distributions become intractable.
 The higher the value of p(θ′), the more likely we are to accept.
 To get more intuition on how the test works, we’ve created the following figure from this Jupyter Notebook, showing the progression of samples to approximate a target posterior. This example is derived from Welling & Teh (2011).
+
+Reducing Metropolis-Hastings Data Usage
+What happens when we consider the Bayesian posterior inference case with large datasets? (Perhaps we’re interested in the same example in the figure above, except that the posterior is based on more data points.) Then our goal is to sample to approximate the distribution p(θ|x1,…,xN) for large N. By Bayes’ rule, this is p0(θ)p(x1,…,xN|θ)p(x1,…,xN) where p0 is the prior. We additionally assume that the xi are conditionally independent given θ. The MH test therefore becomes:
+
+u<?min{p0(θ′)∏Ni=1p(xi|θ′)q(θ|θ′)p0(θ)∏Ni=1p(xi|θ)q(θ′|θ),1}
+Or, after taking logarithms and rearranging (while ignoring the minimum operator, which technically isn’t needed here), we get
+
+log(uq(θ′|θ)p0(θ)q(θ|θ′)p0(θ′))<?∑i=1Nlogp(xi|θ′)p(xi|θ)
+The problem now is apparent: it’s expensive to compute all the p(xi|θ′) terms, and this has to be done every time we sample since it depends on θ′.
+
+The naive way to deal with this is to apply the same test, but with a minibatch of b elements:
+
+log(uq(θ′|θ)p0(θ)q(θ|θ′)p0(θ′))<?Nb∑i=1blogp(x∗i|θ′)p(x∗i|θ)
+Unfortunately, this won’t sample from the correct target distribution; see Section 6.1 in Bardenet et al. (2017) for details.
+
+A better strategy is to start with the same batch of b points, but then gauge the confidence of the batch test relative to using the full data. If, after seeing b points, we already know that our proposed sample θ′ is significantly worse than our current sample θ, then we should reject right away. If θ′ is significantly better, we should accept. If it’s ambiguous, then we increase the size of our test batch, perhaps to 2b elements, and then measure the test’s confidence. Lather, rinse, repeat. As mentioned earlier, Korattikara et al. (2014) and Bardenet et al. (2014) developed algorithms following this framework.
+
+A weakness of the above approach is that it’s doing repeated testing and one must reduce the allowable test error each time one increments the test batch size. Unfortunately, there is also a significant probability that the approaches above will grow the test batch all the way to the full dataset, and they offer at most constant factor speedups over testing the full dataset.
+
+Minibatch Metropolis-Hastings: Our Contribution
+Change the Acceptance Function
+To set up our test, we first define the log transition probability ratio Δ:
+
+Δ(θ,θ′)=logp0(θ′)∏Ni=1p(xi|θ′)q(θ|θ′)p0(θ)∏Ni=1p(xi|θ)q(θ′|θ)
+This log ratio factors into a sum of per-sample terms, so when we approximate its value by computing on a minibatch we get an unbiased estimator of its full-data value plus some noise (which is asymptotically normal by the Central Limit Theorem).
+
+The first step for applying our MH test is to use a different acceptance function. Expressed in terms of Δ, the classical MH accepts a transition with probability given by the blue curve.
+
+Instead of using the classical test, we’ll use the sigmoid function. It might not be apparent why this is allowed, but there’s some elegant theory that explains why using this alternative function as the acceptance test for MH still results in the correct semantics of MCMC. That is, under the same mild assumptions, the distribution of samples (θi)Ti=1 approaches the target distribution.
+
+More more details...Read the reference....This is a very important learning
+
+Day 11
+--------
+I went through Daphene Koller's amazing lectures on sampling and different sampling algorithms. 
+https://www.coursera.org/lecture/probabilistic-graphical-models-2-inference/simple-sampling-kqCQC
+
+She also explains MAP (Maximum a posterior). 
+
+I also went through the mathematical steps of understanding maximizing KL divergence, which is an important loss function used in Variational Inference. A good understanding can be obtained from here:
+1. https://benmoran.wordpress.com/2015/02/21/variational-bayes-and-the-evidence-lower-bound/
+2. http://paulrubenstein.co.uk/deriving-the-variational-lower-bound/
+3. https://chrisorm.github.io/tags.html#Variational-Inference-ref
+4. https://chrisorm.github.io/VI-Why.html
+5. https://www.coursera.org/lecture/bayesian-methods-in-machine-learning/learning-with-priors-0mkuB
+
+Having a good understanding of probability density functions seemed important here. I brushed up my knowledge from this source:
+https://betanalpha.github.io/assets/case_studies/probability_theory.html#42_probability_density_functions
+
+When our space is given by the real numbers or a subset thereof, X⊆RN, we can no longer assign finite probability to each point x∈X with a probability mass function. The immediate problem is that any non-atomic subset of X will contain an uncountably infinite number of points and the sum of probability mass function over that subset will explode unless we assign zero probability mass to all but a countable number of points.
+
+Instead we must utilize probability density functions over which we can integrate to give probabilities and expectations. Given a probability density function, π:X→R, we can reconstruct probabilities as
+Pπ[A]=∫Adxπ(x),
+and expectation value as
+Eπ[f]=∫Xdxπ(x)f(x).
+
+Unlike probability mass functions, probability densities don’t transform quite as naturally under a measurable transformation. The complication is that the differential volumes over which we integrate will in general change under such a transformation, and probability density functions have to change in the opposite way to compensate and ensure that probabilities are conserved. The change in volumes is quantified by the determinant of the Jacobian matrix of partial derivatives, |J(x)|, where
+Jij(x)=∂gi/∂xj(x).
+
+For example, the pushforward probability density function corresponding to the reparameterization g:RN→RN picks up an inverse factor of the Jacobian determinent,
+π∗(y)=π(g−1(y))|J(g−1(x))|−1=π(g−1(y))∣∣∣∂g∂x(g−1(y))∣∣∣−1
+
+If the measurable transformation is many-to-one then we have to take into account all of the roots of y=g(x) for a given y, {x1(y),…,xN(y)},
+π∗(y)=∑n=1Nπ(xn(y))|J(xn(y))|−1=∑n=1Nπ(xn(y))∣∣∣∂g∂x(xn(y))∣∣∣−1.
+
+Deriving the pushforward probability density function for transformations that change the dimensionality of the space, such as marginalizations, are more challenging and require analytically integrating an appropriately reparameterized probability density function over the complementary spaces.
