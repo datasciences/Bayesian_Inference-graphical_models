@@ -149,3 +149,17 @@ Ecosystem and modularity:
 A collection of recent papers in Variational Inference
 -----------------------------
 1. https://github.com/otokonoko8/implicit-variational-inference
+
+
+
+Other probabilistic libraries in Python
+-------------------------------
+1. ptstat: Probabilistic Programming and Statistical Inference in PyTorch
+2. pyro: Deep universal probabilistic programming with Python and PyTorch http://pyro.ai
+3. probtorch: Probabilistic Torch is library for deep generative models that extends PyTorch.
+4. paysage: Unsupervised learning and generative models in python/pytorch.
+5. pyvarinf: Python package facilitating the use of Bayesian Deep Learning methods with Variational Inference for PyTorch.
+6. pyprob: A PyTorch-based library for probabilistic programming and inference compilation.
+7. mia: A library for running membership inference attacks against ML models.
+8. pro_gan_pytorch: ProGAN package implemented as an extension of PyTorch nn.Module.
+9. botorch: Bayesian optimization in PyTorch
