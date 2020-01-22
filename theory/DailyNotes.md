@@ -529,3 +529,33 @@ Ref: https://www.youtube.com/watch?v=2pEkWk-LHmU
 ![VI1](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/blob/master/images/kl.png)
 ![VI2](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/blob/master/images/jensen.png)
 ![VI3](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/blob/master/images/elbo.png)
+
+Day 12-24
+---------
+During the last 12 days I was busy preparing more content, making presentations and eventually couldn't update github regularly. 
+
+During these days. I learned several topics in depth. 
+1. Markovian and Non Markovian methods
+2. Markov chain
+3. Markov chain monte carlo
+4. Grid approximation
+5. Quadratic approximation
+6. Metropolis hasting
+7. NUTS sampler
+8. Information theory basics
+9. Average information
+10. Differential Information
+11. Entropy
+12. Variational free energy
+13. Variational Inference or Relative entropy
+14. Evidence lowerbound
+15. Jensen's inequality
+16. Monte carlo drop
+17. Dropout with L2 regularization is equivalent to Bernoulli posterior with a Gaussian Prior
+18. Bayes by backpropagation
+19. Bayes by backpropagation on convolutional neural network
+20. Basics of bayesian networks and conditional probability on bayesian networks
+21. Maximum a posteriory and Maximum likelyhood difference
+22. I learned pyro python package to make stochastic models, MNIST model etc. This has been a difficult journey and it continues.
+
+  
