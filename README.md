@@ -27,7 +27,8 @@ The main advantages of going bayesian are as follows:
 * Bayesian methods helps to derive credible intervals (similar to confidence interval but not the same) around the mean using the predicted distribution.
 * Bayesian method can utilize informed or uninformed priors. Priors are nothing but prior knowledge about the distribution of samples. This is extremely useful fot getting better predictions as well as decreasing time required for traing a ML or DL model.
 * Bayesian methods work efficiently even with small sample sizes for deep learning models or machine learning models.
-* Bayesian methods account for variability in the measurement of the data
+* Bayesian methods account for variability in the measurement of the data.
+* Bayesian methods are a solution to the over-fitting problem. Bayesian approach allows us to set certain priors on our features. For ex: Bayesian regression with a normal prior is same as ridge regression(L2 regularisation)![Video](https://www.coursera.org/learn/bayesian-methods-in-machine-learning/lecture/p1FM9/linear-regression).
 
 
 Core architecture of a bayesian method
