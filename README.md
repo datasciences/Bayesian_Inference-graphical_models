@@ -46,7 +46,7 @@ Books
 
 If you want to learn some statistical modeling and get acquinted with statistical problem solving start with this book "https://bookdown.org/roback/bookdown-bysh/" suggested by Statistical Rethinking Record.
 
-For some basic calculus: http://tutorial.math.lamar.edu/Classes/CalcII/Probability.aspx
+For basic calculus: http://tutorial.math.lamar.edu/Classes/CalcII/Probability.aspx
 
 Papers
 --------
