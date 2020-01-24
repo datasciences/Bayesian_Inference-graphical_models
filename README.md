@@ -3,7 +3,7 @@
 ![GitHub Logo](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/blob/master/images/Bayesian.jpg)
 
 
-This serves as a repository containing my Bayesian Inference learnings. Please do not get overwhelmed by the names of several packages written in the title. During my learning curve, due to the resources I used, I moved from brms through pymc3 to pyro. Initially, when I started out, I built models in brms. It was quite to easy to build and improve the model. But, eventually when it got harder to assess the outputs and underlying theory, I switched to Pymc3, which has a strong open source community around it. Later, once I picked up the theory and started building models in pymc3, I switched myself to pyro and trying my best to get expertise in it. You can read more about bayesian inference and the organisation of my resources below. 
+This serves as a repository containing my Bayesian Inference learnings. Please do not get overwhelmed by the names of several packages written in the title. During my learning curve, due to the resources I used, I moved from brms through pymc3 to pyro. Initially, when I started out, I built models in brms (An R package). It was quite to easy to build and improve the model. But, eventually when it got harder to assess the outputs, underlying theory and need for bayesian python models, I switched to Pymc3, which has a strong open source community around it. Later, once I picked up the theory and started building models in pymc3, I switched myself to pyro and trying my best to get expertise in it. You can read more about bayesian inference and the organisation of my resources below. 
 
 Why I made this repository?
 
