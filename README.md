@@ -1,23 +1,27 @@
-# Bayesian machine learning and deep learning workout area with Brms, Pymc3, Pyro and Gpytorch
+# Bayesian machine learning and deep learning workout area with Brms, Pymc3, Pyro (and possibly Gpytorch in the future)
 
 ![GitHub Logo](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/blob/master/images/Bayesian.jpg)
 
-Uncertainity estimation in machine learning, deep learning and reinforcement learning methods are increasingly becoming popular due to the latest research advancements in variational inference and dropout methods. 
+
+This serves as a repository containing my Bayesian Inference learnings. Please do not get overwhelmed by the names of several packages written in the title. During my learning curve, due to the resources I used, I moved from brms through pymc3 to pyro. Initially, when I started out, I built models in brms. It was quite to easy to build and improve the model. But, eventually when it got harder to assess the outputs and underlying theory, I switched to Pymc3, which has a strong open source community around it. Later, once I picked up the theory and started building models in pymc3, I switched myself to pyro and trying my best to get expertise in it. You can read more about bayesian inference and the organisation of my resources below. 
+
+Why I made this repository?
+
+Uncertainity estimation in machine learning, deep learning and reinforcement learning methods are increasingly becoming popular due to the latest research advancements in variational inference, monte carlo dropout, bayes by backpropagation and its application in convolutional and recurrent neural networks. 
 
 This repository will contain book chapter reviews, bayesian model implementations and resources for learning bayesian modeling. I did a rigorous research on this topic to come up with a list of most influential books and programming packages on this topic to layout a plan for my study. The list of books and packages are listed under Books. 
 
 Overview 
 --------
-There will be several folders and subfolders in this repository. 
+There will be several folders and subfolders in this repository. Currently, this is a compilation of several knowledge that I learned from different resoures. If you would like to follow along, I would suggest you to start with Think Bayes book and then stick to Statistical Rethinking book. Further, you can access exercises from "notebooks folder". 
 
+* Exercises [[Jupyter notebooks]](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/tree/master/notebooks)
+
+For book chapters review, I have really enjoyed reading from different authors since it helped me to understand and reason about the same concept multiple time. Currently, I am sticking to statistical rethinking book, but I do access other books I mentioned to understand a concept better. 
+ 
 * A summary of the Book chapters can be accessed from subfolders [[theory folder]](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/tree/master/theory)
+
 * A summary of my daily notes [[theory folder]](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/tree/master/theory)
-* All basic statistical exercises from think bayes will go into [[stats folder]](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/tree/master/stats)
-* All practical exercises using machine learning will go into folder [[ml]](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/tree/master/ml)
-* All practical exercises using deep learning will go into folder [[dl]](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/tree/master/dl)
-* Both ml and dl folders will contain subfolders with examples, inference from R and python libraries such as Pymc3, Brms, Pyro, gpytorch or Botorch. 
-* ml using Pymc3
-* dl using Pymc3
 
 
 Why going bayesian is good?
@@ -31,21 +35,18 @@ The main advantages of going bayesian are as follows:
 * Bayesian methods are a solution to the over-fitting problem. Bayesian approach allows us to set certain priors on our features. For ex: Bayesian regression with a normal prior is same as ridge regression(L2 regularisation)![Video](https://www.coursera.org/learn/bayesian-methods-in-machine-learning/lecture/p1FM9/linear-regression).
 
 
-Core architecture of a bayesian method
---------
-
-
 Books
 --------
 
+* Think Bayes
+* Statistical rethinking
+* Bayesian analysis with python
+* Bayesian data analysis
 * Information Theory, Inference, and Learning Algorithms
 * Gaussian process for machine learning
 * pattern recognition and machine learning
-* Statistical rethinking
-* Bayesian analysis with python
 * Probability theory: The logic of science
-* Bayesian data analysis
-* Think Bayes
+
 
 If you want to learn some statistical modeling and get acquinted with statistical problem solving start with this book "https://bookdown.org/roback/bookdown-bysh/" suggested by Statistical Rethinking Record.
 
@@ -71,6 +72,8 @@ Talks
 Blog
 --------
 1. http://fastml.com/bayesian-machine-learning/
+2. https://medium.com/panoramic/gaussian-processes-for-little-data-2501518964e4
+
 
 Gaussian Processes 
 -------------
@@ -93,10 +96,6 @@ Gaussian processes are a powerful tool in the machine learning toolbox.They allo
 15. A tutorial on Bayesian optimization using gaussian process: https://arxiv.org/pdf/1807.02811.pdf
 16. https://ax.dev/docs/bayesopt
 
-
-Blog
-------
-https://medium.com/panoramic/gaussian-processes-for-little-data-2501518964e4
 
 
 Link between Bayesian inference, Gaussian processes and deep learning
