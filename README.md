@@ -13,14 +13,10 @@ This repository will contain book chapter reviews, bayesian model implementation
 
 Overview 
 --------
-There will be several folders and subfolders in this repository. Currently, this is a compilation of several knowledge that I learned from different resoures. If you would like to follow along, I would suggest you to start with Think Bayes book and then stick to Statistical Rethinking book. Further, you can access exercises from "notebooks folder". 
+There will be several folders and subfolders in this repository. Currently, this is a compilation of several knowledge that I learned from different resoures. If you would like to follow along, I would suggest you to start with Think Bayes book and then stick to Statistical Rethinking book. Further, you can access exercises from "notebooks folder". For book chapters review, I have really enjoyed reading from different authors since it helped me to understand and reason about the same concept multiple time. Currently, I am sticking to statistical rethinking book, but I do access other books I mentioned to understand a concept better. 
 
-* Exercises [[Jupyter notebooks]](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/tree/master/notebooks)
-
-For book chapters review, I have really enjoyed reading from different authors since it helped me to understand and reason about the same concept multiple time. Currently, I am sticking to statistical rethinking book, but I do access other books I mentioned to understand a concept better. 
- 
+* Exercises [[Jupyter notebooks]](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/tree/master/notebooks) 
 * A summary of the Book chapters can be accessed from subfolders [[theory folder]](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/tree/master/theory)
-
 * A summary of my daily notes [[theory folder]](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/tree/master/theory)
 
 
