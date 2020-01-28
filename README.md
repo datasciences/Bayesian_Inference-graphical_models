@@ -48,6 +48,69 @@ If you want to learn some statistical modeling and get acquinted with statistica
 
 For basic calculus: http://tutorial.math.lamar.edu/Classes/CalcII/Probability.aspx
 
+
+Sequence of jupyter notebooks that I used to study bayesian inference by compiling different resources
+--------
+<table class="tg">
+  <tr>
+    <th class="tg-yw4l"><b>Name</b></th>
+    <th class="tg-yw4l"><b>Description</b></th>
+    <th class="tg-yw4l"><b>Category</b></th>
+    <th class="tg-yw41"><b>Level</b></th>
+    <th class="tg-yw4l"><b>Link </b></th>
+    <th class="tg-yw4l"><b>Blog </b></th>
+    
+  </tr>
+  
+  <tr>
+    <td class="tg-yw4l">Understanding probability and posterior probability distribution</td>
+    <td class="tg-yw4l">Understanding probability and posterior probability distribution</td>
+    <td class="tg-yw4l">Probability</td>
+    <td class="tg-yw4l">Beginner</td>
+    <td class="tg-yw4l"><a href="https://github.com/AllenDowney/ThinkBayes2/tree/master/code">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" width = '400px' >
+</a></td>
+    <td class="tg-yw4l"><a href="https://medium.com/">read</a></td>
+  </tr>
+  
+  
+  <tr>
+    <td class="tg-yw4l">Sampling and Variational Inference</td>
+    <td class="tg-yw4l">Sampling and Variational Inference.</td>
+    <td class="tg-yw4l">Machine learning and Deep Learning</td>
+    <td class="tg-yw4l">Beginner</td>
+    <td class="tg-yw4l"><a href="https://colab.research.google.com/drive/1pgfT_sdoyNoYKxr_5SHYDm7yS1ANNI0e">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" width = '400px' >
+</a></td>
+    <td class="tg-yw4l"><a href="https://medium.com/">read</a></td>
+  </tr>
+  
+  <tr>
+    <td class="tg-yw4l">Introduction to Pyro</td>
+    <td class="tg-yw4l">Introduction to Pyro.</td>
+    <td class="tg-yw4l">Bayesian Inference</td>
+    <td class="tg-yw4l">Intermediate</td>
+    <td class="tg-yw4l"><a href="https://colab.research.google.com/drive/1FvNCbnu16evlCXyxxzNPf1uHUkVkDSFJ">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" width = '400px' >
+</a></td>
+    <td class="tg-yw4l"><a href="https://medium.com/">read</a></td>
+  </tr>
+
+  <tr>
+    <td class="tg-yw4l">MNIST with Pyro</td>
+    <td class="tg-yw4l">MNIST with Pyro.</td>
+    <td class="tg-yw4l">Neural Networks</td>
+    <td class="tg-yw4l">Beginner</td>
+    <td class="tg-yw4l"><a href="https://colab.research.google.com/drive/10rk3yYgPLPGxa0o7YFMk3MvckLt_1FKU">
+  <img src="https://colab.research.google.com/assets/colab-badge.svg" width = '400px' >
+</a></td>
+    <td class="tg-yw4l"><a href="https://medium.com/">read</a></td>
+  </tr> 
+  
+</table>
+
+
+
 Papers
 --------
 
