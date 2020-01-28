@@ -64,7 +64,7 @@ Sequence of jupyter notebooks that I used to study bayesian inference by compili
   
   <tr>
     <td class="tg-yw4l">Understanding probability and posterior probability distribution</td>
-    <td class="tg-yw4l">Understanding probability and posterior probability distribution</td>
+    <td class="tg-yw4l">Introduction to probability, understanding joint and conditional probability, Bayes theorem and posterior distributions</td>
     <td class="tg-yw4l">Probability</td>
     <td class="tg-yw4l">Beginner</td>
     <td class="tg-yw4l"><a href="https://github.com/AllenDowney/ThinkBayes2/blob/master/code/chap02.ipynb">
@@ -76,8 +76,8 @@ Sequence of jupyter notebooks that I used to study bayesian inference by compili
   
   <tr>
     <td class="tg-yw4l">Sampling and Variational Inference</td>
-    <td class="tg-yw4l">Sampling and Variational Inference.</td>
-    <td class="tg-yw4l">Machine learning and Deep Learning</td>
+    <td class="tg-yw4l">An introduction to sampling and variational methods.</td>
+    <td class="tg-yw4l">Sampling and approximation methods</td>
     <td class="tg-yw4l">Advanced</td>
     <td class="tg-yw4l"><a href="https://colab.research.google.com/drive/1pgfT_sdoyNoYKxr_5SHYDm7yS1ANNI0e">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" width = '400px' >
@@ -87,7 +87,7 @@ Sequence of jupyter notebooks that I used to study bayesian inference by compili
   
   <tr>
     <td class="tg-yw4l">Introduction to Pyro</td>
-    <td class="tg-yw4l">Introduction to Pyro.</td>
+    <td class="tg-yw4l">Introduction to Pyro, a probabilistic programming package build on top of Pytorch.</td>
     <td class="tg-yw4l">Bayesian Inference</td>
     <td class="tg-yw4l">Advanced</td>
     <td class="tg-yw4l"><a href="https://colab.research.google.com/drive/1FvNCbnu16evlCXyxxzNPf1uHUkVkDSFJ">
