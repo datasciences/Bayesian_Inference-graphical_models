@@ -67,7 +67,7 @@ Sequence of jupyter notebooks that I used to study bayesian inference by compili
     <td class="tg-yw4l">Understanding probability and posterior probability distribution</td>
     <td class="tg-yw4l">Probability</td>
     <td class="tg-yw4l">Beginner</td>
-    <td class="tg-yw4l"><a href="https://github.com/AllenDowney/ThinkBayes2/tree/master/code">
+    <td class="tg-yw4l"><a href="https://github.com/AllenDowney/ThinkBayes2/blob/master/code/chap02.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" width = '400px' >
 </a></td>
     <td class="tg-yw4l"><a href="https://medium.com/">read</a></td>
@@ -78,7 +78,7 @@ Sequence of jupyter notebooks that I used to study bayesian inference by compili
     <td class="tg-yw4l">Sampling and Variational Inference</td>
     <td class="tg-yw4l">Sampling and Variational Inference.</td>
     <td class="tg-yw4l">Machine learning and Deep Learning</td>
-    <td class="tg-yw4l">Beginner</td>
+    <td class="tg-yw4l">Advanced</td>
     <td class="tg-yw4l"><a href="https://colab.research.google.com/drive/1pgfT_sdoyNoYKxr_5SHYDm7yS1ANNI0e">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" width = '400px' >
 </a></td>
@@ -89,7 +89,7 @@ Sequence of jupyter notebooks that I used to study bayesian inference by compili
     <td class="tg-yw4l">Introduction to Pyro</td>
     <td class="tg-yw4l">Introduction to Pyro.</td>
     <td class="tg-yw4l">Bayesian Inference</td>
-    <td class="tg-yw4l">Intermediate</td>
+    <td class="tg-yw4l">Advanced</td>
     <td class="tg-yw4l"><a href="https://colab.research.google.com/drive/1FvNCbnu16evlCXyxxzNPf1uHUkVkDSFJ">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" width = '400px' >
 </a></td>
@@ -100,8 +100,8 @@ Sequence of jupyter notebooks that I used to study bayesian inference by compili
     <td class="tg-yw4l">MNIST with Pyro</td>
     <td class="tg-yw4l">MNIST with Pyro.</td>
     <td class="tg-yw4l">Neural Networks</td>
-    <td class="tg-yw4l">Beginner</td>
-    <td class="tg-yw4l"><a href="https://colab.research.google.com/drive/10rk3yYgPLPGxa0o7YFMk3MvckLt_1FKU">
+    <td class="tg-yw4l">Advanced</td>
+    <td class="tg-yw4l"><a href="https://colab.research.google.com/github/paraschopra/bayesian-neural-network-mnist/blob/master/bnn.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" width = '400px' >
 </a></td>
     <td class="tg-yw4l"><a href="https://medium.com/">read</a></td>
