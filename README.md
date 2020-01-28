@@ -70,7 +70,7 @@ Sequence of jupyter notebooks that I used to study bayesian inference by compili
     <td class="tg-yw4l"><a href="https://github.com/AllenDowney/ThinkBayes2/blob/master/code/chap02.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" width = '400px' >
 </a></td>
-    <td class="tg-yw4l"><a href="https://docs.google.com/presentation/d/1D1uT92LgG5Rp5zTWeJhSjZzxihL-7oU8Ddsk18uZCBI/edit?usp=sharing">read</a></td>
+    <td class="tg-yw4l"><a href="https://docs.google.com/presentation/d/1Bb-M69vHNezFNsmJKcjSqpNokWxAdc7j-kFfkfPve-A/edit?usp=sharing">read</a></td>
   </tr>
   
   
@@ -82,7 +82,7 @@ Sequence of jupyter notebooks that I used to study bayesian inference by compili
     <td class="tg-yw4l"><a href="https://colab.research.google.com/drive/1pgfT_sdoyNoYKxr_5SHYDm7yS1ANNI0e">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" width = '400px' >
 </a></td>
-    <td class="tg-yw4l"><a href="https://docs.google.com/presentation/d/1Bb-M69vHNezFNsmJKcjSqpNokWxAdc7j-kFfkfPve-A/edit?usp=sharing">read</a></td>
+    <td class="tg-yw4l"><a href="https://docs.google.com/presentation/d/1D1uT92LgG5Rp5zTWeJhSjZzxihL-7oU8Ddsk18uZCBI/edit?usp=sharing">read</a></td>
   </tr>
   
   <tr>
