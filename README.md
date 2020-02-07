@@ -79,7 +79,7 @@ Sequence of jupyter notebooks that I used to study bayesian inference by compili
     <td class="tg-yw4l">An introduction to sampling and variational methods.</td>
     <td class="tg-yw4l">Sampling and approximation methods</td>
     <td class="tg-yw4l">Advanced</td>
-    <td class="tg-yw4l"><a href="https:">
+    <td class="tg-yw4l"><a href="https://colab.research.google.com/drive/1pgfT_sdoyNoYKxr_5SHYDm7yS1ANNI0e">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" width = '400px' >
 </a></td>
     <td class="tg-yw4l"><a href="https:">read</a></td>
