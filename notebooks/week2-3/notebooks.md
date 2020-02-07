@@ -7,7 +7,7 @@
 1. https://github.com/AllenDowney/ThinkBayes2/tree/master/code
 
 * Pymc3
-2. 
+2. https://github.com/susanli2016/Machine-Learning-with-Python/blob/master/Bayesian%20Statistics%20Python_PyMC3_ArviZ.ipynb
 
 First we will learn how to calculate posterior probability using python. Further, we will use a python package called pymc3 and see how bayesian inference can be done.
 

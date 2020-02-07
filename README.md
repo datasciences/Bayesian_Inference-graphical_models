@@ -1,9 +1,9 @@
-# Bayesian machine learning and deep learning workout area with Brms, Pymc3, Pyro (and possibly Gpytorch in the future)
+# Bayesian machine learning and deep learning workout area with Brms, Pymc3, Pyro and prophet.
 
 ![GitHub Logo](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/blob/master/images/Bayesian.jpg)
 
 
-This serves as a repository containing my Bayesian Inference learnings. Please do not get overwhelmed by the names of several packages written in the title. During my learning curve, due to the resources I used, I moved from brms through pymc3 to pyro. Initially, when I started out, I built models in brms (An R package). It was quite to easy to build and improve the model. But, eventually when it got harder to assess the outputs, underlying theory and need for bayesian python models, I switched to Pymc3, which has a strong open source community around it. Later, once I picked up the theory and started building models in pymc3, I switched myself to pyro and trying my best to get expertise in it. You can read more about bayesian inference and the organisation of my resources below. 
+This serves as a repository containing my Bayesian Inference learnings. Please do not get overwhelmed by the names of several packages written in the title. During my learning curve, due to the resources I used, I moved from brms through pymc3 to pyro. Initially, when I started out, I built models in brms (An R package). It was quite to easy to build and improve the model. But, eventually when it got harder to assess the outputs, underlying theory and a need for bayesian python models, I switched to Pymc3, which has a strong open source community around it. Later, once I picked up the theory and started building models in pymc3, I switched myself to pyro and trying my best to get expertise in it. You can read more about bayesian inference and the organisation of my resources below. 
 
 Why I made this repository?
 
@@ -70,7 +70,7 @@ Sequence of jupyter notebooks that I used to study bayesian inference by compili
     <td class="tg-yw4l"><a href="https://github.com/AllenDowney/ThinkBayes2/blob/master/code/chap02.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" width = '400px' >
 </a></td>
-    <td class="tg-yw4l"><a href="https://docs.google.com/presentation/d/1Bb-M69vHNezFNsmJKcjSqpNokWxAdc7j-kFfkfPve-A/edit?usp=sharing">read</a></td>
+    <td class="tg-yw4l"><a href="https:">read</a></td>
   </tr>
   
   
@@ -79,10 +79,10 @@ Sequence of jupyter notebooks that I used to study bayesian inference by compili
     <td class="tg-yw4l">An introduction to sampling and variational methods.</td>
     <td class="tg-yw4l">Sampling and approximation methods</td>
     <td class="tg-yw4l">Advanced</td>
-    <td class="tg-yw4l"><a href="https://colab.research.google.com/drive/1pgfT_sdoyNoYKxr_5SHYDm7yS1ANNI0e">
+    <td class="tg-yw4l"><a href="https:">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" width = '400px' >
 </a></td>
-    <td class="tg-yw4l"><a href="https://docs.google.com/presentation/d/1D1uT92LgG5Rp5zTWeJhSjZzxihL-7oU8Ddsk18uZCBI/edit?usp=sharing">read</a></td>
+    <td class="tg-yw4l"><a href="https:">read</a></td>
   </tr>
   
   <tr>
@@ -93,7 +93,7 @@ Sequence of jupyter notebooks that I used to study bayesian inference by compili
     <td class="tg-yw4l"><a href="https://colab.research.google.com/drive/1FvNCbnu16evlCXyxxzNPf1uHUkVkDSFJ">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" width = '400px' >
 </a></td>
-    <td class="tg-yw4l"><a href="https://docs.google.com/presentation/d/1Bb-M69vHNezFNsmJKcjSqpNokWxAdc7j-kFfkfPve-A/edit?usp=sharing">read</a></td>
+    <td class="tg-yw4l"><a href="https:">read</a></td>
   </tr>
 
   <tr>
