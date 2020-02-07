@@ -104,7 +104,7 @@ Sequence of jupyter notebooks that I used to study bayesian inference by compili
     <td class="tg-yw4l"><a href="https://colab.research.google.com/github/paraschopra/bayesian-neural-network-mnist/blob/master/bnn.ipynb">
   <img src="https://colab.research.google.com/assets/colab-badge.svg" width = '400px' >
 </a></td>
-    <td class="tg-yw4l"><a href="https://docs.google.com/presentation/d/1Bb-M69vHNezFNsmJKcjSqpNokWxAdc7j-kFfkfPve-A/edit?usp=sharing">read</a></td>
+    <td class="tg-yw4l"><a href="https:">read</a></td>
   </tr> 
   
 </table>
