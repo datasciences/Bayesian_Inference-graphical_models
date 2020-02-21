@@ -1,6 +1,7 @@
 '''
 A repeating coin toss trial to produce a total of 5 heads.
 The trial is conducted for 10 consecutive times.
+Learned from : https://github.com/junpenglao/advance-bayesian-modelling-with-PyMC3/blob/master/Notebooks/Code1%20-%20Forward_Random.ipynb
 '''
 
 import scipy.stats as st
