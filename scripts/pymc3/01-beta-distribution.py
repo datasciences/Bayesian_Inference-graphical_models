@@ -13,23 +13,26 @@ import numpy as np
 from scipy import stats
 import matplotlib.pyplot as plt
 
+# Generate random number between 0 and 1 which are equally spaced
 x = np.linspace(0, 1, 100)
 
+# Look at a beta distribution with equal alpha and beta parameters
 y = stats.beta(0.5, 0.5).pdf(x)
 
+# Plot the beta distribution
 plt.plot(y)
 
-"""# Beta distribution for several parameter values"""
-
+"""# Now let's look at Beta distribution for several parameter values"""
+# Define several parameters
 params = [0.5, 1, 2, 3]
 
-x = np.linspace(0, 1, 100)
-
+# create a subplot for equivalent lenth of parameters and shared axes
 f, ax = plt.subplots(len(params),
                      len(params),
                      sharex = True,
                      sharey = True)
 
+# loop through the parameters and plot the distributions
 for i in range(len(params)):
   for j in range(len(params)):
     y = stats.beta(params[i], params[j]).pdf(x)
