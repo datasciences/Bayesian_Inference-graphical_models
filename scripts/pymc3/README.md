@@ -9,9 +9,16 @@ What is a random variable distribution definition do?
 ------
 distributions in pymc3 has two methods, random and logp. random generates data points using numpy and scipy whereas logp generates log probability value using theano tensors. 
 
-Random method and logp method
+logp method
 -------
+logp calculates the logposterior of the free variables and data. A notebook is included to further study this concept (08_developer-guide-03).
 
+Dirichlet distribution
+------
+Dirichlet is a generalization of beta distribution with parameter alpha (Beta distribution has parameter alpha and beta since it has only two outcomes). Dirichlet will have several alpha parameters representing each variable and their corresponding density. It is a conjugate prior of multinomial distribution, similar to beta distribution being the conjugate prior of the binomial distribution. 
+
+
+A wonderful explanation is given here:https://stats.stackexchange.com/questions/244917/what-exactly-is-the-alpha-in-the-dirichlet-distribution 
 
 
 How does a Normal randomvariable function looks like?
@@ -97,3 +104,56 @@ class Normal(Continuous):
 
         return bound((-tau * (value - mu)**2 + tt.log(tau / np.pi / 2.)) / 2.,
                      sigma > 0)
+
+
+
+log posterior
+-------
+Ref : https://github.com/pymc-devs/pymc3/blob/7493d5b61eeff58120f0d0e8b6cfbc05556c565b/pymc3/stats.py#L119
+
+
+def _log_post_trace(trace, model=None, progressbar=False):
+    """Calculate the elementwise log-posterior for the sampled trace.
+    Parameters
+    ----------
+    trace : result of MCMC run
+    model : PyMC Model
+        Optional model. Default None, taken from context.
+    progressbar: bool
+        Whether or not to display a progress bar in the command line. The
+        bar shows the percentage of completion, the evaluation speed, and
+        the estimated time to completion
+    Returns
+    -------
+    logp : array of shape (n_samples, n_observations)
+        The contribution of the observations to the logp of the whole model.
+    """
+    model = modelcontext(model)
+    cached = [(var, var.logp_elemwise) for var in model.observed_RVs]
+
+    def logp_vals_point(pt):
+        if len(model.observed_RVs) == 0:
+            return floatX(np.array([], dtype='d'))
+
+        logp_vals = []
+        for var, logp in cached:
+            logp = logp(pt)
+            if var.missing_values:
+                logp = logp[~var.observations.mask]
+            logp_vals.append(logp.ravel())
+
+        return np.concatenate(logp_vals)
+
+    try:
+        points = trace.points()
+    except AttributeError:
+        points = trace
+
+    points = tqdm(points) if progressbar else points
+
+    try:
+        logp = (logp_vals_point(pt) for pt in points)
+        return np.stack(logp)
+    finally:
+        if progressbar:
+            points.close()

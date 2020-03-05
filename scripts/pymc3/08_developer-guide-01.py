@@ -12,6 +12,7 @@ variables with observations cannot be transformed.
 
 https://docs.pymc.io/developer_guide.html
 https://docs.pymc.io/notebooks/api_quickstart.html
+https://github.com/suriyadeepan/BayesianML/blob/master/pymc3-intro/API%20-%20Quick%20Start.ipynb
 '''
 
 # Simple normal model

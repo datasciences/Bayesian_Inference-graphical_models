@@ -1,6 +1,7 @@
 # Import libraries
 import pymc3 as pm
 import theano.tensor as tt
+import numpy as np
 
 '''
 Print intermediate variables in pymc3
