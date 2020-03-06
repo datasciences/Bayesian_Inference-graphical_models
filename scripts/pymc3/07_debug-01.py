@@ -10,9 +10,18 @@ https://docs.pymc.io/notebooks/howto_debugging.html
 
 # Model 1
 with pm.Model() as model:
+
+    # mu of shape 2,2
     mu = pm.Normal('mu', mu = 0, sigma = 2, shape = (2, 2))
+    # sd of shape 2,2
     sd = pm.HalfNormal('sd', sigma = 1, shape = (2, 2))
-    dc = pm.Dirichlet('dc', a = np.array([1.] * 3))
+
+    # alpha value represents the proportion of parameters
+    # the density function will convert the output to values between 0 and 1
+    # The total probability would sum to one.
+    # Output: dc __str__ = [0.0625 0.625  0.3125]
+    dc = pm.Dirichlet('dc', a = np.array([1, 10, 5]))
+    
 
     mu_print = tt.printing.Print('mu')(mu)
     sd_print = tt.printing.Print('sd')(sd)
