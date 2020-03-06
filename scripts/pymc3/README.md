@@ -1,9 +1,18 @@
 # Pymc3 random concepts
 Ref: https://docs.pymc.io/developer_guide.html
 
+
+To understand the concepts in pymc3 and ppl in general, it is important to understand the logic behind it. Read the following links to get an overview of what goes under the hood of a ppl.
+1. http://alfan-farizki.blogspot.com/2015/07/pymc-tutorial-bayesian-parameter.html
+2. https://github.com/ericmjl/bayesian-analysis-recipes/blob/master/notebooks/sampling-loglikelihood.md
+
+
 What is logp?
 -----
 Calling myModel.logp returns the log probability of the model at the current parameter setting. So if you ran MAP() it would be the logp at the MAP, if you sampled, it would be the logp at the last sampled parameter value.
+
+Ex: pm.Normal is a density function of a standard normal
+pm.Normal.dist(mu = 0, sigma = 1, shape = 2).logp(0).eval()
 
 What is a random variable distribution definition do?
 ------
@@ -12,6 +21,11 @@ distributions in pymc3 has two methods, random and logp. random generates data p
 logp method
 -------
 logp calculates the logposterior of the free variables and data. A notebook is included to further study this concept (08_developer-guide-03).
+
+Write a standalone distribution
+-----
+y = pm.Binomial.dist(n=10, p=0.5)
+y.logp(4).eval()
 
 Dirichlet distribution
 ------
@@ -157,3 +171,43 @@ def _log_post_trace(trace, model=None, progressbar=False):
     finally:
         if progressbar:
             points.close()
+
+A glimpse into categorical distribution
+-----
+Categorical distribution is used for individual data points distribution modeling. It accepts Dirichlet distribution proportions and total number of data points in the observation. 
+
+It is given by:
+zi|pk ∼Cat(p) 
+
+In pymc3 it is used to model Zi | Pk, where Zi are categories of each data point given the probability of the data point Pk being from any of the k mixtures.  
+
+zi are individual group assignments for data points with probability of being from either one of K components. Where K components are modeled using dirichlet distributions. The dirichlet distribution models multivariate data where the proportion sums to 1. 
+
+A free categorical random variable in pymc3 always gives outputs as 0s. This is bit strange at this point for me.
+
+Mixture model
+------
+A mixture model accepts weight components w and component distributions. 
+w can be modeled using dirichlet distribution.
+component distribution can be modeled using Multivariate distribution with mean mu and sigma. Mixture model shape usually represents the number of components in the mixture. 
+
+Multivariate distribution
+-----
+Multivariate model accepts a vector of size n for the 'mean' and a covariance matrix. It is also possible to give a iterable mean and iterable covariance matrices to model independent group of variables. The shape of the Multivariate Normal can be equal to the number of features in the multivariate distribution. 
+
+Dirichlet distribution
+-------
+It is used to model proportions. It has only one parameter alpha where alpha > 1 and the sum of proportion would be 1.  
+
+
+basic, free and observed random variables
+-----
+Once a model is defined, one can always call model.Free_RVs or model.Observed_Rvs to get the random variables in the model.
+
+Shape parameter
+-----
+It is important to understand that none of the random variables have any shape parameter. It is a parameter used by pymc3 to evaluate a function a
+
+Observed random variable
+------
+Observed argument explicitly ﬂags the random variable 'Obs'(User defined) as the one that is not a latent variable that can vary across model simulations (i.e., it will not be estimated), but instead is given by the data. 

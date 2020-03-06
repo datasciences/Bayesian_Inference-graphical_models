@@ -43,8 +43,9 @@ plt.plot(lnp)
 trace.point(0, 1) # sample no and chain no
 
 
-
-
+# Plot logp values for a binomial distribution
+y = pm.Binomial.dist(n=10, p=0.5)
+plt.plot([y.logp(i).eval() for i in range(11)])
 
 
 
