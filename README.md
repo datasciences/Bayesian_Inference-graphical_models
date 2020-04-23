@@ -110,32 +110,33 @@ Sequence of jupyter notebooks that I used to study bayesian inference by compili
 
 Pymc3
 -----
-[x] 00-coin-toss-trial2.py
-[x] 00-coin-toss-trial.py
-[x] 01-beta-distribution.py
-[x] 02_coin_toss_pymc3.py
-[x] 03_normal-distribution_pymc3.py
-[x] 04_covariance.py
-[x] 05_trimodal-distribution.py
-[x] 06_mixture-model-01.py
-[x] 06_mixture-model-02.py
-[x] 06_mixture-model-03.py
-[x] 07_debug-01.py
-[x] 07_debug-02.py
-[x] 07_debug-03.py
-[x] 07_understand-distribution-pymc3.py
-[x] 08_developer-guide-01.py
-[x] 08_developer-guide-02.py
-[x] 08_developer-guide-03.ipynb
-[x] 08_exam_ability.py
-[x] 09_holdoutset-prediction-01.py
-[x] 10_categorical-01.py
-[x] 10_categorical-02.py
-[x] 10_categorical.py
-[x] 11_datageneration-estimation-pymc3.py
-[x] 12_MvNormal-experiments-01.py
-[x] 13_Changepoint_detection.ipynb
-[x] 13_verify-datapoints-generation.py
+
+- [x] 00-coin-toss-trial2.py
+- [x] 00-coin-toss-trial.py
+- [x] 01-beta-distribution.py
+- [x] 02_coin_toss_pymc3.py
+- [x] 03_normal-distribution_pymc3.py
+- [x] 04_covariance.py
+- [x] 05_trimodal-distribution.py
+- [x] 06_mixture-model-01.py
+- [x] 06_mixture-model-02.py
+- [x] 06_mixture-model-03.py
+- [x] 07_debug-01.py
+- [x] 07_debug-02.py
+- [x] 07_debug-03.py
+- [x] 07_understand-distribution-pymc3.py
+- [x] 08_developer-guide-01.py
+- [x] 08_developer-guide-02.py
+- [x] 08_developer-guide-03.ipynb
+- [x] 08_exam_ability.py
+- [x] 09_holdoutset-prediction-01.py
+- [x] 10_categorical-01.py
+- [x] 10_categorical-02.py
+- [x] 10_categorical.py
+- [x] 11_datageneration-estimation-pymc3.py
+- [x] 12_MvNormal-experiments-01.py
+- [x] 13_Changepoint_detection.ipynb
+- [x] 13_verify-datapoints-generation.py
 
 
 pgmpy
