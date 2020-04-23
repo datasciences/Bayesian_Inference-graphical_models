@@ -3,6 +3,8 @@
 ![GitHub Logo](https://github.com/vvrahul11/Bayesian_ml_dl_workout_area/blob/master/images/Bayesian.jpg)
 
 
+Introduction
+-------
 This serves as a repository containing my Bayesian Inference learnings. Please do not get overwhelmed by the names of several packages written in the title. During my learning curve, due to the resources I used, I moved from brms through pymc3 to pyro. Initially, when I started out, I built models in brms (An R package). It was quite to easy to build and improve the model. But, eventually when it got harder to assess the outputs, underlying theory and a need for bayesian python models, I switched to Pymc3, which has a strong open source community around it. Later, once I picked up the theory and started building models in pymc3, I switched myself to pyro and trying my best to get expertise in it. You can read more about bayesian inference and the organisation of my resources below. 
 
 Why I made this repository?
@@ -55,7 +57,6 @@ Sequence of jupyter notebooks that I used to study bayesian inference by compili
     <th class="tg-yw4l"><b>Category</b></th>
     <th class="tg-yw41"><b>Level</b></th>
     <th class="tg-yw4l"><b>Link </b></th>
-    <th class="tg-yw4l"><b>Blog </b></th>
     
   </tr>
   
@@ -109,6 +110,32 @@ Sequence of jupyter notebooks that I used to study bayesian inference by compili
 
 Pymc3
 -----
+[x] 00-coin-toss-trial2.py
+[x] 00-coin-toss-trial.py
+[x] 01-beta-distribution.py
+[x] 02_coin_toss_pymc3.py
+[x] 03_normal-distribution_pymc3.py
+[x] 04_covariance.py
+[x] 05_trimodal-distribution.py
+[x] 06_mixture-model-01.py
+[x] 06_mixture-model-02.py
+[x] 06_mixture-model-03.py
+[x] 07_debug-01.py
+[x] 07_debug-02.py
+[x] 07_debug-03.py
+[x] 07_understand-distribution-pymc3.py
+[x] 08_developer-guide-01.py
+[x] 08_developer-guide-02.py
+[x] 08_developer-guide-03.ipynb
+[x] 08_exam_ability.py
+[x] 09_holdoutset-prediction-01.py
+[x] 10_categorical-01.py
+[x] 10_categorical-02.py
+[x] 10_categorical.py
+[x] 11_datageneration-estimation-pymc3.py
+[x] 12_MvNormal-experiments-01.py
+[x] 13_Changepoint_detection.ipynb
+[x] 13_verify-datapoints-generation.py
 
 
 pgmpy
